@@ -48,35 +48,24 @@
 
     <!-- HERO -->
     <section class="hero">
-        <div class="slider">
-            <div class="slide active"><img src="images/hero-slide-1.jpg" alt="Clinical Research"></div>
-            <div class="slide"><img src="images/hero-slide-2.jpg" alt="Life Sciences"></div>
-            <div class="slide"><img src="images/hero-slide-3.jpg" alt="Pharmaceutical"></div>
-            <div class="slide"><img src="images/hero-slide-4.jpg" alt="Biomedical"></div>
-            <div class="slide"><img src="images/hero-slide-5.jpg" alt="Cosmetic"></div>
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('images/hero-slide-1.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-slide-2.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-slide-3.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-slide-4.jpg');"></div>
+            <div class="slide" style="background-image: url('images/hero-slide-5.jpg');"></div>
         </div>
-        <div class="matte-overlay"></div>
-        <button class="slider-arrow prev" aria-label="Previous Slide">&#10094;</button>
-        <button class="slider-arrow next" aria-label="Next Slide">&#10095;</button>
-        <div class="slider-dots">
-            <button class="dot active"></button>
-            <button class="dot"></button>
-            <button class="dot"></button>
-            <button class="dot"></button>
-            <button class="dot"></button>
-        </div>
-        <div class="progress-bar"></div>
+
         <div class="hero-content">
-            <div class="badge">
-                <span class="badge-dot"></span>
+            <div class="hero-label">
                 <span data-i18n="motto">Your research, our operational commitment!</span>
             </div>
-            <h1 class="hero-title" data-i18n="hero_title">
-                The alliance of clinical expertise and digital innovation
+            <h1 class="hero-title">
+                <span data-i18n="hero_title">The alliance of clinical expertise and digital innovation</span>
             </h1>
             <p class="hero-text" data-i18n="hero_subtitle">We support laboratories, CROs and biotechs by securing
                 clinical operations and modernising their processes.</p>
-            <div class="buttons">
+            <div class="hero-btns">
                 <a href="companies.html" class="btn btn-primary" data-i18n="btn_companies">For Companies →</a>
                 <a href="careers.html" class="btn btn-outline" data-i18n="btn_careers">Careers →</a>
             </div>
@@ -93,35 +82,41 @@
             </div>
             <div class="who-we-are-grid">
                 <div class="who-block animate-in">
-                    <div class="trust-icon" style="margin: 0 auto 16px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    <div class="trust-icon" style="background: rgba(15, 118, 110, 0.1); color: var(--primary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                            <path
+                                d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            <path d="M12 2v15.77" opacity="0.3" />
                         </svg>
                     </div>
-                    <p data-i18n="who_block1">A tailor-made consulting firm</p>
+                    <p class="card-text" data-i18n="who_block1">A tailor-made consulting firm</p>
                 </div>
-                <div class="who-block animate-in" style="transition-delay: 0.1s;">
-                    <div class="trust-icon" style="margin: 0 auto 16px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <div class="who-block animate-in">
+                    <div class="trust-icon" style="background: rgba(15, 118, 110, 0.1); color: var(--primary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
-                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                            <polyline points="7.5 4.21 12 6.81 16.5 4.21" opacity="0.3" />
+                            <polyline points="7.5 19.79 7.5 14.6 12 12 16.5 14.6 16.5 19.79" opacity="0.3" />
+                            <polyline points="12 12 12 22" opacity="0.3" />
                         </svg>
                     </div>
-                    <p data-i18n="who_block2">Dedicated to Labs, CROs and Biotechs</p>
+                    <p class="card-text" data-i18n="who_block2">Dedicated to Labs, CROs and Biotechs</p>
                 </div>
-                <div class="who-block animate-in" style="transition-delay: 0.2s;">
-                    <div class="trust-icon" style="margin: 0 auto 16px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                <div class="who-block animate-in">
+                    <div class="trust-icon" style="background: rgba(15, 118, 110, 0.1); color: var(--primary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                             <circle cx="9" cy="7" r="4" />
-                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" opacity="0.3" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" opacity="0.3" />
                         </svg>
                     </div>
-                    <p data-i18n="who_block3">Acting as a right-hand operational partner, not a simple provider</p>
+                    <p class="card-text" data-i18n="who_block3">Acting as a right-hand operational partner, not a simple
+                        provider</p>
                 </div>
             </div>
         </div>
@@ -135,30 +130,39 @@
                 <h2 class="section-title">The Foundation of Your Success</h2>
             </div>
             <div class="expertise-pillars">
-                <!-- CLINICAL OPS -->
-                <div class="pillar-card animate-in">
-                    <h3 class="pillar-title"><span style="font-size: 2rem;">🔬</span> <span
-                            data-i18n="exp_left_title">Clinical Operations</span></h3>
-                    <ul class="pillar-list">
-                        <li data-i18n="do_1">Clinical Research Associates (CRA)</li>
-                        <li data-i18n="do_2">Regulatory support</li>
-                        <li data-i18n="do_3">Medical writing</li>
-                    </ul>
+                <div class="pillar animate-in">
+                    <div class="card-icon" style="background: var(--primary);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            <path d="M12 2v20" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title" data-i18n="exp_left_title">Clinical Operations</h3>
                     <p class="pillar-text" data-i18n="exp_left_text">Experienced experts to secure the quality and
                         execution of your clinical trials.</p>
-                </div>
-                <!-- DIGITAL TRANSFORMATION -->
-                <div class="pillar-card animate-in" style="transition-delay: 0.1s;">
-                    <h3 class="pillar-title"><span style="font-size: 2rem;">⚡</span> <span
-                            data-i18n="exp_right_title">Digital Transformation</span></h3>
-                    <ul class="pillar-list">
-                        <li>Digital audits</li>
-                        <li>Zero-paper processes</li>
-                        <li>eCRF / CTMS implementation</li>
-                        <li>Team training</li>
+                    <ul class="pillar-list" data-i18n="exp_left_list">
+                        <li>• Clinical Research Associates (CRA)</li>
+                        <li>• Regulatory support</li>
+                        <li>• Medical writing</li>
                     </ul>
+                </div>
+                <div class="pillar animate-in">
+                    <div class="card-icon" style="background: var(--primary-light);">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <circle cx="12" cy="12" r="3" opacity="0.3" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title" data-i18n="exp_right_title">Digital Transformation</h3>
                     <p class="pillar-text" data-i18n="exp_right_text">We modernise your workflows to improve
                         performance, compliance and efficiency.</p>
+                    <ul class="pillar-list" data-i18n="exp_right_list">
+                        <li>• Digital audits</li>
+                        <li>• Zero-paper processes</li>
+                        <li>• eCRF / CTMS implementation</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -306,33 +310,30 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html" data-i18n="nav_home">Home</a>
-                        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-                        <a href="careers.html" data-i18n="nav_careers">Careers</a>
-                        <a href="about.html" data-i18n="nav_about">About</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="companies.html" data-i18n="nav_companies">For Companies</a></li>
+                        <li><a href="careers.html" data-i18n="nav_careers">Careers</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
-                    <div class="footer-links">
-                        <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
-                        <a href="mailto:consultantsurmesure.careers@gmail.com">consultantsurmesure.careers@gmail.com</a>
-                        <a href="contact.html" data-i18n="nav_contact">Contact Form</a>
-                        <span>France & Europe</span>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a></li>
+                        <li><a href="tel:+33609670943">06 09 67 09 43</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_legal">Legal</h4>
-                    <div class="footer-links">
-                        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-                        <a href="#" data-i18n="footer_terms">Terms of Service</a>
-                    </div>
+                    <h4 class="footer-col-title">Location</h4>
+                    <p class="footer-brand-text">Maison-Laffitte, France<br>Available Worldwide</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2025 Consultant sur Mesure. All rights reserved.</span>
-                <span>Maison-Laffitte, France</span>
+                <p>&copy; 2025 Consultant sur Mesure. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/consultant-sur-mesure/" target="_blank">LinkedIn</a>
+                </div>
             </div>
         </div>
     </footer>

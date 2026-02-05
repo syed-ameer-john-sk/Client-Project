@@ -45,7 +45,9 @@
     <section class="page-hero">
         <div class="page-hero-content">
             <div class="page-label" data-i18n="companies_label">For Companies</div>
-            <h1 class="page-title" data-i18n="companies_title">Secure Your Clinical Research Projects</h1>
+            <h1 class="page-title">
+                <span data-i18n="companies_title">Secure Your Clinical Research Projects</span>
+            </h1>
             <p class="page-subtitle" data-i18n="companies_subtitle">Partner with us to access qualified consultants who
                 integrate seamlessly into your teams.</p>
         </div>
@@ -64,12 +66,10 @@
                 <!-- Pillar 1: Clinical Operations -->
                 <div class="service-pillar animate-in">
                     <div class="card-icon" style="background: var(--primary);">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                            <polyline points="3.29 7 12 12 20.71 7" />
-                            <line x1="12" y1="22" x2="12" y2="12" />
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                            <path d="M12 2v20" opacity="0.1" />
                         </svg>
                     </div>
                     <div class="service-pillar-content">
@@ -88,9 +88,10 @@
                 <!-- Pillar 2: Digital Transformation -->
                 <div class="service-pillar animate-in">
                     <div class="card-icon" style="background: var(--primary-light);">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <circle cx="12" cy="12" r="3" opacity="0.3" />
                         </svg>
                     </div>
                     <div class="service-pillar-content">
@@ -190,7 +191,6 @@
                     <p class="process-text" data-i18n="p1_text">We analyze your project requirements and expertise
                         needs.</p>
                 </div>
-                <!-- Repeat for other steps -->
                 <div class="process-step animate-in">
                     <div class="process-number">2</div>
                     <h3 class="process-title" data-i18n="p2_title">Match</h3>
@@ -222,34 +222,30 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
-                    <div class="footer-links">
-                        <a href="index.html" data-i18n="nav_home">Home</a>
-                        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-                        <a href="careers.html" data-i18n="nav_careers">Careers</a>
-                        <a href="about.html" data-i18n="nav_about">About</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="companies.html" data-i18n="nav_companies">For Companies</a></li>
+                        <li><a href="careers.html" data-i18n="nav_careers">Careers</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                    </ul>
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
-                    <div class="footer-links">
-                        <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
-                        <a href="tel:+33609670943">06 09 67 09 43</a>
-                        <a href="https://www.linkedin.com/company/consultant-sur-mesure/" target="_blank"
-                            rel="noopener">LinkedIn</a>
-                        <a href="contact.html" data-i18n="nav_contact">Contact Form</a>
-                    </div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a></li>
+                        <li><a href="tel:+33609670943">06 09 67 09 43</a></li>
+                    </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_legal">Legal</h4>
-                    <div class="footer-links">
-                        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
-                        <a href="#" data-i18n="footer_terms">Terms of Service</a>
-                    </div>
+                    <h4 class="footer-col-title">Location</h4>
+                    <p class="footer-brand-text">Maison-Laffitte, France<br>Available Worldwide</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2025 Consultant sur Mesure. All rights reserved.</span>
-                <span>Maison-Laffitte, France</span>
+                <p>&copy; 2025 Consultant sur Mesure. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/consultant-sur-mesure/" target="_blank">LinkedIn</a>
+                </div>
             </div>
         </div>
     </footer>
