@@ -30,6 +30,59 @@
     --container-width: 1200px;
     --header-height: 80px;
     --transition: cubic-bezier(0.4, 0, 0.2, 1) 0.4s;
+
+    /* Premium Effects */
+    --hero-glow: radial-gradient(circle at 50% 50%, rgba(15, 118, 110, 0.15) 0%, transparent 60%);
+    --btn-shadow: 0 4px 6px -1px rgba(15, 118, 110, 0.2), 0 2px 4px -1px rgba(15, 118, 110, 0.1);
+    --btn-inner-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* PREMIUM HERO GLOW ANIMATION */
+@keyframes heroAurora {
+    0% {
+        background-position: 0% 50%;
+        opacity: 0.5;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        opacity: 0.8;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        opacity: 0.5;
+    }
+}
+
+.hero-title {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%;
+    height: 120%;
+    background: var(--hero-glow);
+    z-index: -1;
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+/* PREMIUM BUTTONS */
+.btn-primary {
+    box-shadow: var(--btn-shadow), var(--btn-inner-shadow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(15, 118, 110, 0.3), 0 4px 6px -2px rgba(15, 118, 110, 0.1), var(--btn-inner-shadow);
 }
 
 * {
@@ -45,12 +98,77 @@ html {
 }
 
 body {
-    font-family: 'Outfit', 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    /* Removed Outfit */
     color: var(--dark);
     background: var(--pearl);
     line-height: 1.6;
     overflow-x: hidden;
     font-size: var(--fs-base);
+    position: relative;
+    /* For noise overlay */
+}
+
+/* STRICT TYPOGRAPHY HIERARCHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo,
+.hero-title,
+.section-title,
+.page-title,
+.footer-brand-name,
+.footer-col-title {
+    font-family: 'Playfair Display', serif;
+}
+
+button,
+.btn,
+.nav a,
+.hero-label,
+.section-label,
+.page-label {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* PREMIUM POLISH: Texture & Detail */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--pearl);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Selection */
+::selection {
+    background: var(--primary);
+    color: var(--white);
 }
 
 /* ANIMATIONS */
@@ -128,6 +246,191 @@ body {
 }
 
 .logo:hover {
+    opacity: 1;
+    /* Remove color shift, handle in children */
+}
+
+/* 3D ATOM LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    z-index: 101;
+}
+
+.atom-wrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.atom-nucleus {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: #2dd4bf;
+    /* Teal */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 15px rgba(45, 212, 191, 0.6);
+    z-index: 10;
+}
+
+.atom-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(45, 212, 191, 0.4);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.atom-ring::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    background: #2dd4bf;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px #2dd4bf;
+}
+
+.ring-1 {
+    animation: rotate-atom 4s linear infinite;
+}
+
+.ring-2 {
+    animation: rotate-atom 4s linear infinite -1.33s;
+    transform: translate(-50%, -50%) rotateY(60deg);
+}
+
+.ring-3 {
+    animation: rotate-atom 4s linear infinite -2.66s;
+    transform: translate(-50%, -50%) rotateY(-60deg);
+}
+
+/* To handle the distinct rotations properly, we need a wrapper or specific keyframes per ring if we want complex orbits.
+   Simpler approach for stable "Atom" look: fix the rotation planes. */
+
+.ring-1 {
+    transform: translate(-50%, -50%) rotateZ(0deg) rotateY(70deg);
+}
+
+.ring-2 {
+    transform: translate(-50%, -50%) rotateZ(60deg) rotateY(70deg);
+}
+
+.ring-3 {
+    transform: translate(-50%, -50%) rotateZ(-60deg) rotateY(70deg);
+}
+
+/* Actually, animating them requires a container that spins or individual spin. 
+   Let's use a common "Electronic Orbit" animation style. */
+
+@keyframes electron-orbit {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(var(--angle)) rotateY(70deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotateZ(var(--angle)) rotateY(70deg) rotateX(360deg);
+    }
+}
+
+@keyframes atom-spin {
+    0% {
+        transform: rotateY(0deg) rotateX(10deg);
+    }
+
+    100% {
+        transform: rotateY(360deg) rotateX(10deg);
+    }
+}
+
+/* Updated Wrapper for Global Rotation */
+.atom-wrapper {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    animation: atom-spin 20s linear infinite;
+    /* Slow 3D rotation of the whole atom */
+}
+
+.atom-ring {
+    /* .. existing styles .. */
+    transform-style: preserve-3d;
+}
+
+.ring-1 {
+    --angle: 0deg;
+    animation: electron-orbit 2s linear infinite;
+}
+
+.ring-2 {
+    --angle: 60deg;
+    animation: electron-orbit 2s linear infinite;
+}
+
+.ring-3 {
+    --angle: -60deg;
+    animation: electron-orbit 2s linear infinite;
+}
+
+/* Enhanced Electron Visibility */
+.atom-ring::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    /* Slightly larger orbit radius relative to border */
+    left: 50%;
+    width: 8px;
+    /* Larger electron */
+    height: 8px;
+    background: #2dd4bf;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px #2dd4bf, 0 0 4px #fff;
+    /* Bright core + glow */
+}
+
+.logo-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: -0.02em;
+}
+
+.brand-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: #2dd4bf;
+    /* Teal */
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-top: 4px;
+}
+
+.logo:hover .brand-main {
     color: var(--primary-light);
 }
 
@@ -203,6 +506,95 @@ body {
     background: var(--primary-light);
     transform: translateY(-2px);
     box-shadow: 0 15px 30px rgba(15, 118, 110, 0.3);
+}
+
+/* COMPACT CAREERS DESIGN */
+.section-compact {
+    padding: 60px 0;
+}
+
+/* Horizontal Job Cards for Efficiency */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column stack for horizontal cards */
+    gap: 16px;
+    max-width: 900px;
+    /* Limit width for readability */
+    margin: 40px auto 0;
+}
+
+.job-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 24px 32px;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.job-header {
+    margin-bottom: 0;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    flex: 1;
+}
+
+.job-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.job-info-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 2;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.job-tags {
+    margin-top: 4px;
+}
+
+.job-details {
+    flex: 2;
+    justify-content: flex-start;
+}
+
+/* Force visibility & Alignment for horizontal layout */
+.job-card .btn {
+    margin-top: 0;
+    /* Reset auto margin */
+    flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .job-header {
+        width: 100%;
+    }
+
+    .job-details {
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .job-card .btn {
+        width: 100%;
+        margin-top: 16px;
+    }
 }
 
 .btn-outline {
@@ -344,7 +736,8 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, transparent, rgba(2, 6, 23, 0.8));
+    /* Darker overlay for better text contrast */
+    background: radial-gradient(circle at center, rgba(2, 6, 23, 0.4), rgba(2, 6, 23, 0.9));
     z-index: 2;
 }
 
@@ -354,36 +747,94 @@ body {
     max-width: 900px;
 }
 
+/* HERO LABEL (Pill Design) */
 .hero-label {
-    display: inline-block;
-    padding: 8px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 24px;
+    background: rgba(30, 41, 59, 0.7);
+    /* Dark semi-transparent pill */
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    /* Subtle light border */
     border-radius: 50px;
     color: var(--white);
-    font-size: var(--fs-xs);
+    font-size: var(--fs-sm);
     font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
     margin-bottom: 32px;
     animation: fadeInUp 1s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.label-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2dd4bf;
+    /* Teal dot */
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(45, 212, 191, 0.6);
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--white);
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 .hero-title {
-    font-size: var(--fs-xl);
+    font-size: var(--fs-display);
+    /* Updated to larger display size */
     color: var(--white);
     margin-bottom: 24px;
     line-height: 1.1;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
+.hero-title .text-highlight {
+    color: #2dd4bf;
+    /* Bright Teal highlight */
+    display: inline-block;
+}
+
+.hero-title .ampersand {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--white);
+    font-size: 1.1em;
+    margin: 0 10px;
+}
+
 .hero-title span {
-    display: block;
-    background: linear-gradient(135deg, var(--white) 30%, var(--primary-light) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: inline;
 }
 
 .hero-text {
@@ -1892,4 +2343,116 @@ body {
     .jobs-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* FOOTER */
+.footer {
+    background: var(--dark);
+    color: var(--pearl);
+    padding: 60px 0 40px;
+    font-size: var(--fs-sm);
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-brand-text {
+    color: var(--gray-text);
+    max-width: 300px;
+}
+
+.footer-col-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: var(--pearl);
+    transition: var(--transition);
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+    padding-left: 8px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.8rem;
+    color: var(--gray-text);
+}
+
+.footer-social a {
+    color: var(--pearl);
+    margin-left: 20px;
+    transition: var(--transition);
+    font-size: 1.2rem;
+}
+
+.footer-social a:hover {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+/* Force visibility for Job Card Buttons */
+.job-card .btn {
+    margin-top: auto;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    background: var(--white);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.job-card .btn:hover {
+    background: var(--primary);
+    color: var(--white);
 }

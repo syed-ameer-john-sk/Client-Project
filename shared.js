@@ -13,6 +13,9 @@ const translations = {
         who_block1: "A tailor-made consulting firm",
         who_block2: "Dedicated to Labs, CROs and Biotechs",
         who_block3: "Acting as a right-hand operational partner, not a simple provider",
+        who_block4: "Commitment to Excellence",
+        who_block5: "Innovative Solutions",
+        who_block6: "Global Reach",
 
         expertise_title: "Our Expertise",
         exp_left_title: "Clinical Operations",
@@ -75,13 +78,16 @@ const translations = {
         motto: "Votre recherche, notre engagement opérationnel!",
 
         // HOMEPAGE REDESIGN
-        hero_title: "L'alliance de l'expertise clinique et de l'innovation digitale",
+        hero_title: "Expertise pour <br> <span class='text-highlight'>la Recherche Clinique</span> <br> <span class='ampersand'>&</span> les Sciences de la Vie",
         hero_subtitle: "Nous accompagnons les laboratoires, CRO et biotechs en sécurisant les opérations cliniques et en modernisant leurs processus.",
 
         who_title: "Qui Sommes-Nous",
         who_block1: "Un cabinet de conseil sur mesure",
         who_block2: "Dédié aux Labos, CRO et Biotechs",
         who_block3: "Agissant comme un partenaire opérationnel de confiance, pas un simple prestataire",
+        who_block4: "Engagement d'Excellence",
+        who_block5: "Solutions Innovantes",
+        who_block6: "Portée Mondiale",
 
         expertise_title: "Notre Expertise",
         exp_left_title: "Opérations Cliniques",
@@ -176,7 +182,7 @@ function applyLanguage(lang) {
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = translations[lang][key];
             } else {
-                el.textContent = translations[lang][key];
+                el.innerHTML = translations[lang][key]; // Changed from textContent to innerHTML
             }
         }
     });
@@ -189,13 +195,15 @@ applyLanguage(currentLang);
 
 // Header scroll effect
 const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+if (header) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+}
 
 // Hamburger
 const hamburger = document.getElementById('hamburger');
