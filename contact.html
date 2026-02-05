@@ -13,119 +13,10 @@
     <link rel="stylesheet" href="styles.css">
     <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <style>
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-        }
-
-        .contact-form-card {
-            background: #fff;
-            border-radius: 24px;
-            padding: 48px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-        }
-
-        .contact-info-card {
-            background: linear-gradient(145deg, #0a1628, #0f2240);
-            border-radius: 24px;
-            padding: 48px;
-            color: #fff;
-        }
-
-        .info-item {
-            margin-bottom: 32px;
-        }
-
-        .info-icon {
-            width: 48px;
-            height: 48px;
-            background: rgba(45, 212, 191, 0.15);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            margin-bottom: 16px;
-        }
-
-        .info-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .info-text {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 1.6;
-        }
-
-        .info-text a {
-            color: #2dd4bf;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .info-text a:hover {
-            color: #5eead4;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
-
-        .notification {
-            padding: 16px 20px;
-            border-radius: 12px;
-            margin-bottom: 24px;
-            display: none;
-        }
-
-        .notification.success {
-            background: #dcfce7;
-            color: #166534;
-            border: 1px solid #86efac;
-        }
-
-        .notification.error {
-            background: #fee2e2;
-            color: #991b1b;
-            border: 1px solid #fca5a5;
-        }
-
-        .notification.show {
-            display: block;
-            animation: fadeInUp 0.3s ease;
-        }
-
-        .btn-submit {
-            width: 100%;
-            padding: 18px;
-            font-size: 1rem;
-        }
-
-        .btn-submit:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        @media (max-width: 900px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="header">
         <a href="index.html" class="logo">Consultant sur Mesure</a>
         <nav class="nav">
@@ -141,6 +32,8 @@
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
+
+    <!-- MOBILE NAV -->
     <nav class="mobile-nav" id="mobileNav">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="companies.html" data-i18n="nav_companies">For Companies</a>
@@ -150,6 +43,7 @@
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
 
+    <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="page-hero-content">
             <div class="page-label" data-i18n="contact_label">Contact Us</div>
@@ -159,9 +53,11 @@
         </div>
     </section>
 
+    <!-- CONTACT SECTION -->
     <section class="section section-light">
         <div class="container">
             <div class="contact-grid">
+                <!-- FORM CARD -->
                 <div class="contact-form-card animate-in">
                     <div id="notification" class="notification"></div>
                     <form id="contactForm">
@@ -189,29 +85,57 @@
                             <label class="form-label" data-i18n="form_message">Your Message</label>
                             <textarea class="form-textarea" id="message" name="message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn"
+                        <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;" id="submitBtn"
                             data-i18n="form_submit">Send Message</button>
                     </form>
                 </div>
+
+                <!-- INFO CARD -->
                 <div class="contact-info-card animate-in">
-                    <div class="section-label" data-i18n="contact_info_label" style="color: #2dd4bf;">Contact
-                        Information</div>
-                    <h3 class="section-title" style="font-size: 1.6rem; margin-bottom: 32px;"
+                    <div class="section-label" data-i18n="contact_info_label" style="color: var(--primary-light);">
+                        Contact Information</div>
+                    <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 32px; color: var(--white);"
                         data-i18n="contact_info_title">Get in Touch</h3>
+
                     <div class="info-item">
-                        <div class="info-icon">📧</div>
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
+                        </div>
                         <div class="info-title">Email</div>
                         <div class="info-text">
-                            <a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a>
+                            <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
                         </div>
                     </div>
+
                     <div class="info-item">
-                        <div class="info-icon">📍</div>
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                        </div>
                         <div class="info-title">Location</div>
                         <div class="info-text">44 rue Jean Mermoz<br>78600 Maison-Laffitte, France</div>
                     </div>
+
                     <div class="info-item">
-                        <div class="info-icon">🌍</div>
+                        <div class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10" />
+                                <line x1="2" y1="12" x2="22" y2="12" />
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            </svg>
+                        </div>
                         <div class="info-title">Coverage</div>
                         <div class="info-text">France & Europe<br>Expanding to United States</div>
                     </div>
@@ -220,6 +144,7 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -230,14 +155,17 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
-                    <div class="footer-links"><a href="index.html" data-i18n="nav_home">Home</a><a href="companies.html"
-                            data-i18n="nav_companies">For Companies</a><a href="careers.html"
-                            data-i18n="nav_careers">Careers</a></div>
+                    <div class="footer-links">
+                        <a href="index.html" data-i18n="nav_home">Home</a>
+                        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
+                        <a href="careers.html" data-i18n="nav_careers">Careers</a>
+                        <a href="about.html" data-i18n="nav_about">About</a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
                     <div class="footer-links">
-                        <a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a>
+                        <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
                         <a href="tel:+33609670943">06 09 67 09 43</a>
                         <a href="https://www.linkedin.com/company/consultant-sur-mesure/" target="_blank"
                             rel="noopener">LinkedIn</a>
@@ -246,12 +174,15 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_legal">Legal</h4>
-                    <div class="footer-links"><a href="#" data-i18n="footer_privacy">Privacy Policy</a><a href="#"
-                            data-i18n="footer_terms">Terms of Service</a></div>
+                    <div class="footer-links">
+                        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                        <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom"><span>© 2025 Consultant sur Mesure.</span><span>44 rue Jean Mermoz, 78600
-                    Maison-Laffitte, France</span>
+            <div class="footer-bottom">
+                <span>© 2025 Consultant sur Mesure. All rights reserved.</span>
+                <span>Maison-Laffitte, France</span>
             </div>
         </div>
     </footer>
@@ -279,13 +210,6 @@
             setTimeout(() => notification.classList.remove('show'), 8000);
         }
 
-        function openMailto(params) {
-            const mailtoLink = `mailto:sksyedroshan007@gmail.com?subject=${encodeURIComponent(params.subject)}&body=${encodeURIComponent(
-                `Name: ${params.user_name}\nEmail: ${params.user_email}\nCompany: ${params.user_company}\n\nMessage:\n${params.message}`
-            )}`;
-            window.open(mailtoLink, '_blank');
-        }
-
         contactForm.addEventListener('submit', async function (e) {
             e.preventDefault();
 
@@ -294,27 +218,34 @@
             submitBtn.disabled = true;
             submitBtn.textContent = lang === 'fr' ? 'Envoi en cours...' : 'Sending...';
 
-            // Variables must match template placeholders exactly
             const templateParams = {
-                name: document.getElementById('userName').value,
                 user_name: document.getElementById('userName').value,
                 user_email: document.getElementById('userEmail').value,
-                email: document.getElementById('userEmail').value,
+                email: document.getElementById('userEmail').value, // Standard alias
+                reply_to: document.getElementById('userEmail').value, // Standard alias
+                to_email: document.getElementById('userEmail').value, // Standard alias
+                from_name: document.getElementById('userName').value,
                 user_company: document.getElementById('userCompany').value || 'Not specified',
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
 
-            console.log('Sending with params:', templateParams);
-
             try {
-                // Send notification email to owner
-                const result1 = await emailjs.send(EMAILJS_SERVICE_ID, 'template_ytw1wzz', templateParams);
-                console.log('Contact notification sent:', result1);
+                // 1. Send notification to owner
+                try {
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_ytw1wzz', templateParams);
+                } catch (err1) {
+                    console.error('Owner notification failed:', err1);
+                    throw new Error('Owner template error: ' + (err1.text || err1.status));
+                }
 
-                // Send auto-reply to sender  
-                const result2 = await emailjs.send(EMAILJS_SERVICE_ID, 'template_iqtvzkw', templateParams);
-                console.log('Auto reply sent:', result2);
+                // 2. Send auto-reply to sender
+                try {
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_iqtvzkw', templateParams);
+                } catch (err2) {
+                    console.warn('Auto-reply failed (Owner notified anyway):', err2);
+                    // We don't necessarily want to block success if just the auto-reply fails
+                }
 
                 const successMsg = lang === 'fr' ?
                     'Merci ! Votre message a été envoyé avec succès.' :
@@ -322,13 +253,11 @@
                 showNotification('success', successMsg);
                 contactForm.reset();
             } catch (error) {
-                console.error('EmailJS error:', error);
-                alert('Error details: ' + JSON.stringify(error));
-                openMailto(templateParams);
-                const msg = lang === 'fr' ?
-                    'Votre client email s\'ouvre. Veuillez cliquer Envoyer.' :
-                    'Your email app is opening. Please click Send.';
-                showNotification('success', msg);
+                console.error('Final Error Details:', error);
+                const errorMsg = lang === 'fr' ?
+                    'Une erreur est survenue (' + (error.status || error.message) + '). Veuillez nous contacter directement.' :
+                    'An error occurred (' + (error.status || error.message) + '). Please contact us directly.';
+                showNotification('error', errorMsg);
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;

@@ -11,929 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* ANIMATIONS */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.4;
-            }
-        }
-
-        @keyframes countUp {
-            from {
-                opacity: 0;
-                transform: scale(0.5);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .animate-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .animate-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* HEADER */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 100;
-            padding: 16px 32px;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            color: #fff;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.4rem;
-            font-weight: 600;
-            text-decoration: none;
-            z-index: 101;
-        }
-
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 28px;
-        }
-
-        .nav a {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav a:hover {
-            color: #2dd4bf;
-        }
-
-        .nav a.active {
-            color: #2dd4bf;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .lang-btn {
-            padding: 8px 18px;
-            border: 1.5px solid rgba(255, 255, 255, 0.5);
-            border-radius: 50px;
-            color: #fff;
-            background: transparent;
-            cursor: pointer;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            transition: all 0.3s;
-        }
-
-        .lang-btn:hover {
-            background: #fff;
-            color: #0a1628;
-        }
-
-        /* HAMBURGER MENU */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 101;
-            padding: 10px;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: #fff;
-            transition: all 0.3s;
-            border-radius: 2px;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        .mobile-nav {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(10, 22, 40, 0.98);
-            z-index: 99;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 24px;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s;
-        }
-
-        .mobile-nav.active {
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .mobile-nav a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .mobile-nav a:hover {
-            color: #2dd4bf;
-        }
-
-        /* HERO */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            min-height: 600px;
-            overflow: hidden;
-            background: #0a1628;
-        }
-
-        /* SLIDER */
-        .slider {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
-        }
-
-        .slide.active {
-            opacity: 1;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* MATTE OVERLAY */
-        .matte-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 22, 40, 0.75) 0%, rgba(15, 34, 64, 0.55) 50%, rgba(10, 22, 40, 0.75) 100%);
-            z-index: 2;
-        }
-
-        /* SLIDER CONTROLS */
-        .slider-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 10;
-            width: 54px;
-            height: 54px;
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .slider-arrow:hover {
-            background: #0d9488;
-            border-color: #0d9488;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        .slider-arrow.prev {
-            left: 30px;
-        }
-
-        .slider-arrow.next {
-            right: 30px;
-        }
-
-        .slider-dots {
-            position: absolute;
-            bottom: 100px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            display: flex;
-            gap: 12px;
-        }
-
-        .dot {
-            width: 12px;
-            height: 12px;
-            background: rgba(255, 255, 255, 0.4);
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .dot:hover {
-            background: rgba(255, 255, 255, 0.7);
-        }
-
-        .dot.active {
-            background: #2dd4bf;
-            transform: scale(1.2);
-        }
-
-        .progress-bar {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #0d9488, #2dd4bf);
-            z-index: 10;
-            width: 0%;
-        }
-
-        /* HERO CONTENT */
-        .hero-content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 5;
-            text-align: center;
-            width: 90%;
-            max-width: 850px;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 50px;
-            margin-bottom: 28px;
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            background: #2dd4bf;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .badge span {
-            color: #fff;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.2rem, 5.5vw, 4rem);
-            font-weight: 600;
-            color: #fff;
-            line-height: 1.15;
-            margin-bottom: 20px;
-        }
-
-        .hero-title .highlight {
-            background: linear-gradient(90deg, #5eead4, #2dd4bf);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
-            max-width: 600px;
-            margin: 0 auto 16px;
-            line-height: 1.7;
-        }
-
-        .location {
-            color: #2dd4bf;
-            font-size: 0.95rem;
-            margin-bottom: 32px;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 16px 32px;
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #0d9488, #2dd4bf);
-            color: #fff;
-            box-shadow: 0 8px 24px rgba(13, 148, 136, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(13, 148, 136, 0.5);
-        }
-
-        .btn-outline {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: #fff;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-
-        /* SECTIONS */
-        .section {
-            padding: 100px 32px;
-        }
-
-        .section-light {
-            background: #faf8f5;
-        }
-
-        .section-white {
-            background: #fff;
-        }
-
-        .section-dark {
-            background: linear-gradient(135deg, #0a1628, #0f2240);
-            color: #fff;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 56px;
-        }
-
-        .section-label {
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: #0d9488;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(1.8rem, 4vw, 2.4rem);
-            color: #0a1628;
-        }
-
-        .section-dark .section-title {
-            color: #fff;
-        }
-
-        .section-dark .section-label {
-            color: #2dd4bf;
-        }
-
-        /* STATS SECTION */
-        .stats-section {
-            background: linear-gradient(135deg, #0a1628, #0f2240);
-            padding: 60px 32px;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: #2dd4bf;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        /* CARDS */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-        }
-
-        .card {
-            padding: 36px;
-            background: #fff;
-            border-radius: 20px;
-            border: 1px solid #e8e0d4;
-            transition: all 0.4s;
-            text-decoration: none;
-            display: block;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 24px 48px rgba(0, 0, 0, 0.1);
-            border-color: transparent;
-        }
-
-        .card-icon {
-            width: 56px;
-            height: 56px;
-            background: #0a1628;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            margin-bottom: 20px;
-            transition: all 0.3s;
-        }
-
-        .card:hover .card-icon {
-            background: #0d9488;
-            transform: rotate(-5deg);
-        }
-
-        .card-label {
-            font-size: 0.65rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: #0d9488;
-            margin-bottom: 8px;
-        }
-
-        .card-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            color: #0a1628;
-            margin-bottom: 10px;
-        }
-
-        .card-text {
-            font-size: 0.9rem;
-            color: #4a5568;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .card-link {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: #0a1628;
-        }
-
-        .card:hover .card-link {
-            color: #0d9488;
-        }
-
-        /* CLARITY */
-        .clarity-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-        }
-
-        .clarity-card {
-            padding: 36px;
-            border-radius: 20px;
-        }
-
-        .clarity-do {
-            background: linear-gradient(145deg, #ccfbf1, rgba(204, 251, 241, 0.3));
-            border: 1px solid rgba(13, 148, 136, 0.15);
-        }
-
-        .clarity-dont {
-            background: linear-gradient(145deg, #f3efe8, #faf8f5);
-            border: 1px solid #e8e0d4;
-        }
-
-        .clarity-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 20px;
-        }
-
-        .clarity-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .clarity-do .clarity-icon {
-            background: #0d9488;
-        }
-
-        .clarity-dont .clarity-icon {
-            background: #3b6fa8;
-        }
-
-        .clarity-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.25rem;
-        }
-
-        .clarity-do .clarity-title {
-            color: #0a7c74;
-        }
-
-        .clarity-dont .clarity-title {
-            color: #1a365d;
-        }
-
-        .clarity-list {
-            list-style: none;
-        }
-
-        .clarity-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            margin-bottom: 12px;
-            font-size: 0.9rem;
-            color: #1a365d;
-            line-height: 1.5;
-        }
-
-        .check-icon {
-            flex-shrink: 0;
-            width: 20px;
-            height: 20px;
-            background: #0d9488;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-size: 11px;
-            margin-top: 2px;
-        }
-
-        .clarity-dont .check-icon {
-            background: #3b6fa8;
-        }
-
-        /* TESTIMONIALS */
-        .testimonials-section {
-            background: #fff;
-            padding: 100px 32px;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
-        }
-
-        .testimonial-card {
-            padding: 32px;
-            background: linear-gradient(145deg, #faf8f5, #fff);
-            border-radius: 20px;
-            border: 1px solid #e8e0d4;
-            transition: all 0.3s;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .testimonial-quote {
-            font-size: 0.95rem;
-            color: #4a5568;
-            line-height: 1.7;
-            margin-bottom: 24px;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #0d9488, #2dd4bf);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .testimonial-info h4 {
-            font-size: 0.95rem;
-            color: #0a1628;
-            margin-bottom: 2px;
-        }
-
-        .testimonial-info p {
-            font-size: 0.8rem;
-            color: #0d9488;
-        }
-
-        /* CTA */
-        .cta-content {
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .cta-text {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.75);
-            margin-bottom: 32px;
-            line-height: 1.7;
-        }
-
-        /* FOOTER */
-        .footer {
-            background: #020617;
-            color: #fff;
-            padding: 70px 32px 36px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            padding-bottom: 50px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .footer-brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.35rem;
-            margin-bottom: 14px;
-        }
-
-        .footer-brand-text {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.7;
-            max-width: 260px;
-        }
-
-        .footer-col-title {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .footer-links a,
-        .footer-links span {
-            font-size: 0.875rem;
-            color: rgba(255, 255, 255, 0.6);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #2dd4bf;
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            padding-top: 28px;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 32px;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 900px) {
-            .nav {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .mobile-nav {
-                display: flex;
-            }
-
-            .cards-grid,
-            .clarity-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .header {
-                padding: 14px 20px;
-            }
-
-            .section {
-                padding: 70px 20px;
-            }
-
-            .stats-section {
-                padding: 50px 20px;
-            }
-
-            .hero-content {
-                width: 95%;
-            }
-
-            .buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn {
-                width: 100%;
-                max-width: 280px;
-                text-align: center;
-            }
-
-            .slider-arrow {
-                width: 44px;
-                height: 44px;
-                font-size: 16px;
-            }
-
-            .slider-arrow.prev {
-                left: 16px;
-            }
-
-            .slider-arrow.next {
-                right: 16px;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-brand-text {
-                max-width: 100%;
-                margin: 0 auto;
-            }
-
-            .footer-bottom {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -979,8 +56,8 @@
             <div class="slide"><img src="images/hero-slide-5.jpg" alt="Cosmetic"></div>
         </div>
         <div class="matte-overlay"></div>
-        <button class="slider-arrow prev">&#10094;</button>
-        <button class="slider-arrow next">&#10095;</button>
+        <button class="slider-arrow prev" aria-label="Previous Slide">&#10094;</button>
+        <button class="slider-arrow next" aria-label="Next Slide">&#10095;</button>
         <div class="slider-dots">
             <button class="dot active"></button>
             <button class="dot"></button>
@@ -994,14 +71,11 @@
                 <span class="badge-dot"></span>
                 <span data-i18n="motto">Your research, our operational commitment!</span>
             </div>
-            <h1 class="hero-title">
-                <span data-i18n="hero_line1">Expert Support for</span><br>
-                <span class="highlight" data-i18n="hero_line2">Clinical Research</span><br>
-                <span data-i18n="hero_line3">& Life Sciences</span>
+            <h1 class="hero-title" data-i18n="hero_title">
+                The alliance of clinical expertise and digital innovation
             </h1>
-            <p class="hero-text" data-i18n="hero_text">Connecting pharmaceutical, biomedical, and cosmetic companies
-                with qualified experts who integrate directly into your teams.</p>
-            <p class="location" data-i18n="location">📍 France & Europe | Expanding to United States</p>
+            <p class="hero-text" data-i18n="hero_subtitle">We support laboratories, CROs and biotechs by securing
+                clinical operations and modernising their processes.</p>
             <div class="buttons">
                 <a href="companies.html" class="btn btn-primary" data-i18n="btn_companies">For Companies →</a>
                 <a href="careers.html" class="btn btn-outline" data-i18n="btn_careers">Careers →</a>
@@ -1009,106 +83,160 @@
         </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats-section">
-        <div class="stats-grid">
-            <div class="stat-item animate-in">
-                <div class="stat-number" data-count="150">0</div>
-                <div class="stat-label" data-i18n="stat_experts">Qualified Experts</div>
-            </div>
-            <div class="stat-item animate-in">
-                <div class="stat-number" data-count="50">0</div>
-                <div class="stat-label" data-i18n="stat_clients">Partner Companies</div>
-            </div>
-            <div class="stat-item animate-in">
-                <div class="stat-number" data-count="12">0</div>
-                <div class="stat-label" data-i18n="stat_years">Years Experience</div>
-            </div>
-            <div class="stat-item animate-in">
-                <div class="stat-number" data-count="98">0</div>
-                <div class="stat-label" data-i18n="stat_success">% Success Rate</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- PATHS -->
+    <!-- WHO WE ARE -->
     <section class="section section-light">
         <div class="container">
             <div class="section-header animate-in">
-                <div class="section-label" data-i18n="paths_label">Choose Your Path</div>
-                <h2 class="section-title" data-i18n="paths_title">How Can We Help You?</h2>
+                <div class="section-label" data-i18n="who_title">Who We Are</div>
+                <h2 class="section-title">A Partner, Not Just a Provider</h2>
             </div>
-            <div class="cards-grid">
-                <a href="companies.html" class="card animate-in">
-                    <div class="card-icon">🏢</div>
-                    <div class="card-label" data-i18n="card1_label">For Companies</div>
-                    <h3 class="card-title" data-i18n="card1_title">Secure Your Projects</h3>
-                    <p class="card-text" data-i18n="card1_text">Find the right expert for your clinical research
-                        projects. We ensure mission success, not just placement.</p>
-                    <span class="card-link" data-i18n="card1_cta">Explore Solutions →</span>
-                </a>
-                <a href="careers.html" class="card animate-in">
-                    <div class="card-icon">👥</div>
-                    <div class="card-label" data-i18n="card2_label">For Consultants</div>
-                    <h3 class="card-title" data-i18n="card2_title">Build Your Career</h3>
-                    <p class="card-text" data-i18n="card2_text">Join our network of Life Sciences professionals.
-                        Meaningful missions with reputable companies await.</p>
-                    <span class="card-link" data-i18n="card2_cta">View Opportunities →</span>
-                </a>
+            <div class="who-we-are-grid">
+                <div class="who-block animate-in">
+                    <div class="trust-icon" style="margin: 0 auto 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                        </svg>
+                    </div>
+                    <p data-i18n="who_block1">A tailor-made consulting firm</p>
+                </div>
+                <div class="who-block animate-in" style="transition-delay: 0.1s;">
+                    <div class="trust-icon" style="margin: 0 auto 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <p data-i18n="who_block2">Dedicated to Labs, CROs and Biotechs</p>
+                </div>
+                <div class="who-block animate-in" style="transition-delay: 0.2s;">
+                    <div class="trust-icon" style="margin: 0 auto 16px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <p data-i18n="who_block3">Acting as a right-hand operational partner, not a simple provider</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CLARITY -->
+    <!-- EXPERTISE -->
     <section class="section section-white">
         <div class="container">
             <div class="section-header animate-in">
-                <div class="section-label" data-i18n="clarity_label">Our Approach</div>
-                <h2 class="section-title" data-i18n="clarity_title">Clarity in What We Offer</h2>
+                <div class="section-label" data-i18n="expertise_title">Our Expertise</div>
+                <h2 class="section-title">The Foundation of Your Success</h2>
             </div>
-            <div class="clarity-grid">
-                <div class="clarity-card clarity-do animate-in">
-                    <div class="clarity-header">
-                        <div class="clarity-icon">✓</div>
-                        <h3 class="clarity-title" data-i18n="do_title">What We Do</h3>
-                    </div>
-                    <ul class="clarity-list">
-                        <li><span class="check-icon">✓</span><span data-i18n="do_1">Provide qualified experts integrated
-                                into your teams</span></li>
-                        <li><span class="check-icon">✓</span><span data-i18n="do_2">Stay accountable throughout the
-                                mission</span></li>
-                        <li><span class="check-icon">✓</span><span data-i18n="do_3">Match expertise to your specific
-                                project needs</span></li>
-                        <li><span class="check-icon">✓</span><span data-i18n="do_4">Support pharmaceutical, biomedical &
-                                cosmetic projects</span></li>
-                        <li><span class="check-icon">✓</span><span data-i18n="do_5">Coordinate long-term partnerships
-                                with laboratories</span></li>
+            <div class="expertise-pillars">
+                <!-- CLINICAL OPS -->
+                <div class="pillar-card animate-in">
+                    <h3 class="pillar-title"><span style="font-size: 2rem;">🔬</span> <span
+                            data-i18n="exp_left_title">Clinical Operations</span></h3>
+                    <ul class="pillar-list">
+                        <li data-i18n="do_1">Clinical Research Associates (CRA)</li>
+                        <li data-i18n="do_2">Regulatory support</li>
+                        <li data-i18n="do_3">Medical writing</li>
                     </ul>
+                    <p class="pillar-text" data-i18n="exp_left_text">Experienced experts to secure the quality and
+                        execution of your clinical trials.</p>
                 </div>
-                <div class="clarity-card clarity-dont animate-in">
-                    <div class="clarity-header">
-                        <div class="clarity-icon">✕</div>
-                        <h3 class="clarity-title" data-i18n="dont_title">What We Don't Do</h3>
-                    </div>
-                    <ul class="clarity-list">
-                        <li><span class="check-icon">✕</span><span data-i18n="dont_1">Generic staffing without expertise
-                                matching</span></li>
-                        <li><span class="check-icon">✕</span><span data-i18n="dont_2">Disappear after placement</span>
-                        </li>
-                        <li><span class="check-icon">✕</span><span data-i18n="dont_3">Compromise on candidate
-                                quality</span></li>
-                        <li><span class="check-icon">✕</span><span data-i18n="dont_4">Work outside our domain
-                                expertise</span></li>
-                        <li><span class="check-icon">✕</span><span data-i18n="dont_5">Prioritize volume over fit</span>
-                        </li>
+                <!-- DIGITAL TRANSFORMATION -->
+                <div class="pillar-card animate-in" style="transition-delay: 0.1s;">
+                    <h3 class="pillar-title"><span style="font-size: 2rem;">⚡</span> <span
+                            data-i18n="exp_right_title">Digital Transformation</span></h3>
+                    <ul class="pillar-list">
+                        <li>Digital audits</li>
+                        <li>Zero-paper processes</li>
+                        <li>eCRF / CTMS implementation</li>
+                        <li>Team training</li>
                     </ul>
+                    <p class="pillar-text" data-i18n="exp_right_text">We modernise your workflows to improve
+                        performance, compliance and efficiency.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-header animate-in">
+                <div class="section-label" data-i18n="why_title">Why Choose Us</div>
+                <h2 class="section-title">A Secure & Strategic Alliance</h2>
+            </div>
+            <div class="trust-grid">
+                <div class="trust-block animate-in">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="why_1_title">Agile structure</h4>
+                    <p data-i18n="why_1_text">Small, fast and flexible</p>
+                </div>
+                <div class="trust-block animate-in" style="transition-delay: 0.1s;">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 18h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h1" />
+                            <path d="M18 22H6" />
+                            <path d="M8 18v-2a4 4 0 0 1 8 0v2" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="why_2_title">Double vision</h4>
+                    <p data-i18n="why_2_text">Human expertise + digital efficiency</p>
+                </div>
+                <div class="trust-block animate-in" style="transition-delay: 0.2s;">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="why_3_title">Quality driven</h4>
+                    <p data-i18n="why_3_text">High standards, no compromise</p>
+                </div>
+                <div class="trust-block animate-in" style="transition-delay: 0.3s;">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="why_4_title">International standards</h4>
+                    <p data-i18n="why_4_text">Aligned with global clinical requirements</p>
+                </div>
+            </div>
+
+            <!-- FINAL PROMISE -->
+            <div class="final-promise-box animate-in">
+                <h2 class="promise-text" data-i18n="promise_text">We secure your projects, your data, and your
+                    timelines.</h2>
+            </div>
+
+            <!-- CONVICTION -->
+            <div class="conviction-box animate-in">
+                <p data-i18n="conviction_text">Our approach is based on a simple conviction: The quality of clinical
+                    execution depends above all on the human, scientific and operational quality of the resources
+                    mobilized.</p>
             </div>
         </div>
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="testimonials-section">
+    <section class="testimonials-section section-white">
         <div class="container">
             <div class="section-header animate-in">
                 <div class="section-label" data-i18n="testimonials_label">Testimonials</div>
@@ -1120,10 +248,10 @@
                         exceptional CRA who seamlessly integrated into our team. Their commitment to quality is
                         unmatched."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">MP</div>
+                        <div class="testimonial-avatar">P</div>
                         <div class="testimonial-info">
-                            <h4>Marie Dupont</h4>
-                            <p data-i18n="testimonial_1_role">Clinical Director, Pharma Corp</p>
+                            <h4 data-i18n="testimonial_1_role">Clinical Director</h4>
+                            <p>Pharma Corp</p>
                         </div>
                     </div>
                 </div>
@@ -1132,10 +260,10 @@
                         understanding of our needs made all the difference. Highly recommend for any life sciences
                         project."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">JB</div>
+                        <div class="testimonial-avatar">B</div>
                         <div class="testimonial-info">
-                            <h4>Jean Bernard</h4>
-                            <p data-i18n="testimonial_2_role">R&D Manager, BioMed Lab</p>
+                            <h4 data-i18n="testimonial_2_role">R&D Manager</h4>
+                            <p>BioMed Lab</p>
                         </div>
                     </div>
                 </div>
@@ -1143,10 +271,10 @@
                     <p class="testimonial-quote" data-i18n="testimonial_3">"Their ongoing support throughout the mission
                         sets them apart. A true partner, not just a staffing agency."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">SL</div>
+                        <div class="testimonial-avatar">C</div>
                         <div class="testimonial-info">
-                            <h4>Sophie Laurent</h4>
-                            <p data-i18n="testimonial_3_role">HR Director, Cosmetix</p>
+                            <h4 data-i18n="testimonial_3_role">HR Director</h4>
+                            <p>Cosmetix</p>
                         </div>
                     </div>
                 </div>
@@ -1191,7 +319,7 @@
                         <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
                         <a href="mailto:consultantsurmesure.careers@gmail.com">consultantsurmesure.careers@gmail.com</a>
                         <a href="contact.html" data-i18n="nav_contact">Contact Form</a>
-                        <span>Jouy-le-Moutier, France</span>
+                        <span>France & Europe</span>
                     </div>
                 </div>
                 <div>
@@ -1204,310 +332,11 @@
             </div>
             <div class="footer-bottom">
                 <span>© 2025 Consultant sur Mesure. All rights reserved.</span>
-                <span>5 rue du montant, Jouy-le-Moutier, France</span>
+                <span>Maison-Laffitte, France</span>
             </div>
         </div>
     </footer>
 
-    <script>
-        // ===========================================
-        // TRANSLATIONS
-        // ===========================================
-        const translations = {
-            en: {
-                nav_home: "Home",
-                nav_companies: "For Companies",
-                nav_careers: "Careers",
-                nav_commitments: "Commitments",
-                nav_about: "About",
-                nav_contact: "Contact",
-                motto: "Your research, our devotion!",
-                hero_line1: "Expert Support for",
-                hero_line2: "Clinical Research",
-                hero_line3: "& Life Sciences",
-                hero_text: "Connecting pharmaceutical, biomedical, and cosmetic companies with qualified experts who integrate directly into your teams.",
-                location: "📍 France & Europe | Expanding to United States",
-                btn_companies: "For Companies →",
-                btn_careers: "Careers →",
-                stat_experts: "Qualified Experts",
-                stat_clients: "Partner Companies",
-                stat_years: "Years Experience",
-                stat_success: "% Success Rate",
-                paths_label: "Choose Your Path",
-                paths_title: "How Can We Help You?",
-                card1_label: "For Companies",
-                card1_title: "Secure Your Projects",
-                card1_text: "Find the right expert for your clinical research projects. We ensure mission success, not just placement.",
-                card1_cta: "Explore Solutions →",
-                card2_label: "For Consultants",
-                card2_title: "Build Your Career",
-                card2_text: "Join our network of Life Sciences professionals. Meaningful missions with reputable companies await.",
-                card2_cta: "View Opportunities →",
-                clarity_label: "Our Approach",
-                clarity_title: "Clarity in What We Offer",
-                do_title: "What We Do",
-                dont_title: "What We Don't Do",
-                do_1: "Provide qualified experts integrated into your teams",
-                do_2: "Stay accountable throughout the mission",
-                do_3: "Match expertise to your specific project needs",
-                do_4: "Support pharmaceutical, biomedical & cosmetic projects",
-                do_5: "Coordinate long-term partnerships with laboratories",
-                dont_1: "Generic staffing without expertise matching",
-                dont_2: "Disappear after placement",
-                dont_3: "Compromise on candidate quality",
-                dont_4: "Work outside our domain expertise",
-                dont_5: "Prioritize volume over fit",
-                testimonials_label: "Testimonials",
-                testimonials_title: "What Our Partners Say",
-                testimonial_1: "\"Consultant sur Mesure provided us with an exceptional CRA who seamlessly integrated into our team. Their commitment to quality is unmatched.\"",
-                testimonial_1_role: "Clinical Director, Pharma Corp",
-                testimonial_2: "\"The personalized approach and deep understanding of our needs made all the difference. Highly recommend for any life sciences project.\"",
-                testimonial_2_role: "R&D Manager, BioMed Lab",
-                testimonial_3: "\"Their ongoing support throughout the mission sets them apart. A true partner, not just a staffing agency.\"",
-                testimonial_3_role: "HR Director, Cosmetix",
-                cta_label: "Take the Next Step",
-                cta_title: "Discover Our Commitments",
-                cta_text: "Learn about the principles that guide everything we do. Understand how we differentiate ourselves in the Life Sciences consulting market.",
-                cta_btn: "Our Commitments →",
-                footer_text: "Expert Consulting Partner for Clinical Research. Tailored solutions for pharmaceutical, biomedical, and cosmetic industries.",
-                footer_nav: "Navigation",
-                footer_contact: "Contact",
-                footer_legal: "Legal",
-                footer_privacy: "Privacy Policy",
-                footer_terms: "Terms of Service"
-            },
-            fr: {
-                nav_home: "Accueil",
-                nav_companies: "Entreprises",
-                nav_careers: "Carrières",
-                nav_commitments: "Engagements",
-                nav_about: "À Propos",
-                nav_contact: "Contact",
-                motto: "Votre recherche, notre dévouement !",
-                hero_line1: "Accompagnement Expert pour",
-                hero_line2: "la Recherche Clinique",
-                hero_line3: "& les Sciences de la Vie",
-                hero_text: "Nous connectons les entreprises pharmaceutiques, biomédicales et cosmétiques avec des experts qualifiés intégrés à vos équipes.",
-                location: "📍 France & Europe | Expansion vers les États-Unis",
-                btn_companies: "Entreprises →",
-                btn_careers: "Carrières →",
-                stat_experts: "Experts Qualifiés",
-                stat_clients: "Entreprises Partenaires",
-                stat_years: "Années d'Expérience",
-                stat_success: "% Taux de Réussite",
-                paths_label: "Choisissez Votre Voie",
-                paths_title: "Comment Pouvons-Nous Vous Aider ?",
-                card1_label: "Pour les Entreprises",
-                card1_title: "Sécurisez Vos Projets",
-                card1_text: "Trouvez le bon expert pour vos projets de recherche clinique. Nous garantissons le succès de la mission.",
-                card1_cta: "Découvrir les Solutions →",
-                card2_label: "Pour les Consultants",
-                card2_title: "Construisez Votre Carrière",
-                card2_text: "Rejoignez notre réseau de professionnels des Sciences de la Vie. Des missions significatives vous attendent.",
-                card2_cta: "Voir les Opportunités →",
-                clarity_label: "Notre Approche",
-                clarity_title: "Clarté dans Notre Offre",
-                do_title: "Ce Que Nous Faisons",
-                dont_title: "Ce Que Nous Ne Faisons Pas",
-                do_1: "Fournir des experts qualifiés intégrés à vos équipes",
-                do_2: "Rester responsables tout au long de la mission",
-                do_3: "Adapter l'expertise à vos besoins spécifiques",
-                do_4: "Accompagner les projets pharma, biomédicaux & cosmétiques",
-                do_5: "Coordonner des partenariats durables avec les laboratoires",
-                dont_1: "Staffing générique sans matching d'expertise",
-                dont_2: "Disparaître après le placement",
-                dont_3: "Compromettre la qualité des candidats",
-                dont_4: "Travailler hors de notre domaine d'expertise",
-                dont_5: "Privilégier le volume au détriment de l'adéquation",
-                testimonials_label: "Témoignages",
-                testimonials_title: "Ce Que Disent Nos Partenaires",
-                testimonial_1: "\"Consultant sur Mesure nous a fourni un CRA exceptionnel qui s'est intégré parfaitement à notre équipe. Leur engagement qualité est inégalé.\"",
-                testimonial_1_role: "Directrice Clinique, Pharma Corp",
-                testimonial_2: "\"L'approche personnalisée et la compréhension profonde de nos besoins ont fait toute la différence. Hautement recommandé.\"",
-                testimonial_2_role: "Responsable R&D, BioMed Lab",
-                testimonial_3: "\"Leur soutien continu tout au long de la mission les distingue. Un vrai partenaire, pas une simple agence.\"",
-                testimonial_3_role: "Directrice RH, Cosmetix",
-                cta_label: "Passez à l'Action",
-                cta_title: "Découvrez Nos Engagements",
-                cta_text: "Découvrez les principes qui guident tout ce que nous faisons. Comprenez comment nous nous différencions sur le marché du conseil.",
-                cta_btn: "Nos Engagements →",
-                footer_text: "Partenaire Conseil Expert en Recherche Clinique. Solutions sur mesure pour les industries pharmaceutique, biomédicale et cosmétique.",
-                footer_nav: "Navigation",
-                footer_contact: "Contact",
-                footer_legal: "Mentions Légales",
-                footer_privacy: "Confidentialité",
-                footer_terms: "CGU"
-            }
-        };
-
-        // ===========================================
-        // LANGUAGE TOGGLE
-        // ===========================================
-        let currentLang = localStorage.getItem('site_lang') || 'en';
-        const langBtn = document.getElementById('langBtn');
-
-        function applyLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('site_lang', lang);
-            langBtn.textContent = lang.toUpperCase();
-            document.documentElement.lang = lang;
-
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(function (el) {
-                const key = el.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    el.textContent = translations[lang][key];
-                }
-            });
-        }
-
-        langBtn.addEventListener('click', function () {
-            const newLang = currentLang === 'en' ? 'fr' : 'en';
-            applyLanguage(newLang);
-        });
-
-        // Apply saved language on load
-        applyLanguage(currentLang);
-
-        // ===========================================
-        // HAMBURGER MENU
-        // ===========================================
-        const hamburger = document.getElementById('hamburger');
-        const mobileNav = document.getElementById('mobileNav');
-
-        hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('active');
-            mobileNav.classList.toggle('active');
-            document.body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : '';
-        });
-
-        // Close mobile nav when clicking a link
-        mobileNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileNav.classList.remove('active');
-                document.body.style.overflow = '';
-            });
-        });
-
-        // ===========================================
-        // IMAGE SLIDER
-        // ===========================================
-        const slides = document.querySelectorAll('.slide');
-        const dots = document.querySelectorAll('.dot');
-        const prevBtn = document.querySelector('.slider-arrow.prev');
-        const nextBtn = document.querySelector('.slider-arrow.next');
-        const progressBar = document.querySelector('.progress-bar');
-
-        let currentSlide = 0;
-        let autoPlayTimer;
-        let progressValue = 0;
-
-        function goToSlide(index) {
-            slides[currentSlide].classList.remove('active');
-            dots[currentSlide].classList.remove('active');
-
-            currentSlide = (index + slides.length) % slides.length;
-
-            slides[currentSlide].classList.add('active');
-            dots[currentSlide].classList.add('active');
-
-            progressValue = 0;
-            progressBar.style.width = '0%';
-        }
-
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
-
-        prevBtn.addEventListener('click', function () {
-            prevSlide();
-            resetAutoPlay();
-        });
-
-        nextBtn.addEventListener('click', function () {
-            nextSlide();
-            resetAutoPlay();
-        });
-
-        dots.forEach(function (dot, index) {
-            dot.addEventListener('click', function () {
-                goToSlide(index);
-                resetAutoPlay();
-            });
-        });
-
-        function startAutoPlay() {
-            autoPlayTimer = setInterval(function () {
-                progressValue += 2;
-                progressBar.style.width = progressValue + '%';
-                if (progressValue >= 100) {
-                    nextSlide();
-                    progressValue = 0;
-                }
-            }, 100);
-        }
-
-        function resetAutoPlay() {
-            clearInterval(autoPlayTimer);
-            progressValue = 0;
-            progressBar.style.width = '0%';
-            startAutoPlay();
-        }
-
-        // Start the slider
-        startAutoPlay();
-
-        // ===========================================
-        // SCROLL ANIMATIONS
-        // ===========================================
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-
-                    // Animate counter if it's a stat number
-                    const statNumber = entry.target.querySelector('.stat-number');
-                    if (statNumber && statNumber.dataset.count) {
-                        animateCounter(statNumber);
-                    }
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // ===========================================
-        // COUNTER ANIMATION
-        // ===========================================
-        function animateCounter(element) {
-            const target = parseInt(element.dataset.count);
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
-
-            const timer = setInterval(() => {
-                current += step;
-                if (current >= target) {
-                    element.textContent = target + (element.parentElement.querySelector('.stat-label').textContent.includes('%') ? '' : '+');
-                    clearInterval(timer);
-                } else {
-                    element.textContent = Math.floor(current);
-                }
-            }, 16);
-        }
-    </script>
     <script src="shared.js"></script>
 </body>
 

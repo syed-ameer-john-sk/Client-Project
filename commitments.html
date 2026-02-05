@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <!-- HEADER -->
     <header class="header">
         <a href="index.html" class="logo">Consultant sur Mesure</a>
         <nav class="nav">
@@ -29,6 +30,8 @@
             <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
+
+    <!-- MOBILE NAV -->
     <nav class="mobile-nav" id="mobileNav">
         <a href="index.html" data-i18n="nav_home">Home</a>
         <a href="companies.html" data-i18n="nav_companies">For Companies</a>
@@ -38,6 +41,7 @@
         <a href="contact.html" data-i18n="nav_contact">Contact</a>
     </nav>
 
+    <!-- PAGE HERO -->
     <section class="page-hero">
         <div class="page-hero-content">
             <div class="page-label" data-i18n="commitments_label">Our Commitments</div>
@@ -47,52 +51,80 @@
         </div>
     </section>
 
+    <!-- VALUES -->
     <section class="section section-light">
         <div class="container">
             <div class="section-header animate-in">
                 <div class="section-label" data-i18n="values_label">Our Values</div>
                 <h2 class="section-title" data-i18n="values_title">What We Stand For</h2>
             </div>
-            <div class="cards-grid" style="grid-template-columns: repeat(2, 1fr);">
-                <div class="card animate-in">
-                    <div class="card-icon">🏆</div>
-                    <h3 class="card-title" data-i18n="v1_title">Quality First</h3>
+            <div class="trust-grid">
+                <div class="trust-block animate-in">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="v1_title">Quality First</h4>
                     <p class="card-text" data-i18n="v1_text">We never compromise on the quality of our consultants or
                         services.</p>
                 </div>
-                <div class="card animate-in">
-                    <div class="card-icon">💎</div>
-                    <h3 class="card-title" data-i18n="v2_title">Transparency</h3>
+                <div class="trust-block animate-in">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2v20" />
+                            <path d="m4.93 4.93 14.14 14.14" />
+                            <path d="M2 12h20" />
+                            <path d="m19.07 4.93-14.14 14.14" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="v2_title">Transparency</h4>
                     <p class="card-text" data-i18n="v2_text">Clear communication and honest relationships with all
                         stakeholders.</p>
                 </div>
-                <div class="card animate-in">
-                    <div class="card-icon">🎯</div>
-                    <h3 class="card-title" data-i18n="v3_title">Accountability</h3>
+                <div class="trust-block animate-in">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" />
+                            <circle cx="12" cy="12" r="2" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="v3_title">Accountability</h4>
                     <p class="card-text" data-i18n="v3_text">We stay engaged throughout every mission and take
                         responsibility.</p>
                 </div>
-                <div class="card animate-in">
-                    <div class="card-icon">🤝</div>
-                    <h3 class="card-title" data-i18n="v4_title">Partnership</h3>
+                <div class="trust-block animate-in">
+                    <div class="trust-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h4 data-i18n="v4_title">Partnership</h4>
                     <p class="card-text" data-i18n="v4_text">We build long-term relationships, not transactional
                         arrangements.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section class="section section-dark">
-        <div class="container">
-            <div class="cta-content animate-in">
-                <div class="section-label" data-i18n="cta_label">Ready to Start?</div>
-                <h2 class="section-title" data-i18n="cta_title">Let's Discuss Your Project</h2>
-                <p class="cta-text" data-i18n="cta_text">Tell us about your needs and discover how we can help.</p>
-                <a href="contact.html" class="btn btn-primary" data-i18n="cta_btn">Contact Us →</a>
+            <!-- CONVICTION STATEMENT -->
+            <div class="conviction-box animate-in">
+                <p data-i18n="conviction_text">Our approach is based on a simple conviction: The quality of clinical
+                    execution depends above all on the human, scientific and operational quality of the resources
+                    mobilized.</p>
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -103,14 +135,17 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
-                    <div class="footer-links"><a href="index.html" data-i18n="nav_home">Home</a><a href="companies.html"
-                            data-i18n="nav_companies">For Companies</a><a href="careers.html"
-                            data-i18n="nav_careers">Careers</a></div>
+                    <div class="footer-links">
+                        <a href="index.html" data-i18n="nav_home">Home</a>
+                        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
+                        <a href="careers.html" data-i18n="nav_careers">Careers</a>
+                        <a href="about.html" data-i18n="nav_about">About</a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
                     <div class="footer-links">
-                        <a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a>
+                        <a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a>
                         <a href="tel:+33609670943">06 09 67 09 43</a>
                         <a href="https://www.linkedin.com/company/consultant-sur-mesure/" target="_blank"
                             rel="noopener">LinkedIn</a>
@@ -119,12 +154,15 @@
                 </div>
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_legal">Legal</h4>
-                    <div class="footer-links"><a href="#" data-i18n="footer_privacy">Privacy Policy</a><a href="#"
-                            data-i18n="footer_terms">Terms of Service</a></div>
+                    <div class="footer-links">
+                        <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                        <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom"><span>© 2025 Consultant sur Mesure.</span><span>44 rue Jean Mermoz, 78600
-                    Maison-Laffitte, France</span>
+            <div class="footer-bottom">
+                <span>© 2025 Consultant sur Mesure. All rights reserved.</span>
+                <span>Maison-Laffitte, France</span>
             </div>
         </div>
     </footer>

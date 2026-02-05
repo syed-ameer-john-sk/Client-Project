@@ -1,92 +1,164 @@
 // Consultant sur Mesure - Shared JavaScript
+
 const translations = {
     en: {
         nav_home: "Home", nav_companies: "For Companies", nav_careers: "Careers", nav_commitments: "Commitments", nav_about: "About", nav_contact: "Contact",
         motto: "Your research, our operational commitment!",
-        companies_label: "For Companies", companies_title: "Secure Your Clinical Research Projects", companies_subtitle: "Partner with us to access qualified consultants who integrate seamlessly into your teams.",
-        services_label: "Our Services", services_title: "Tailored Solutions for Your Needs",
-        s1_title: "Clinical Research Associates", s1_text: "Experienced CRAs for monitoring clinical trials and ensuring data integrity.",
-        s2_title: "Data Management", s2_text: "Expert data managers for database design and clinical data quality.",
-        s3_title: "Regulatory Affairs", s3_text: "Specialists in regulatory submissions and compliance across jurisdictions.",
-        s4_title: "Quality Assurance", s4_text: "QA professionals for auditing and GCP/GMP compliance.",
-        s5_title: "Medical Writing", s5_text: "Skilled writers for clinical study reports and regulatory documents.",
-        s6_title: "Project Management", s6_text: "Experienced managers for complex clinical programs.",
-        process_label: "How We Work", process_title: "Our Partnership Process",
-        p1_title: "Understand", p1_text: "We analyze your project requirements and expertise needs.",
-        p2_title: "Match", p2_text: "We identify the perfect consultant from our vetted network.",
-        p3_title: "Integrate", p3_text: "We ensure smooth onboarding into your team.",
-        p4_title: "Support", p4_text: "We provide ongoing support throughout the mission.",
-        careers_label: "Careers", careers_title: "Build Your Career in Life Sciences", careers_subtitle: "Join our network of professionals working on meaningful missions with leading companies.",
-        benefits_label: "Why Join Us", benefits_title: "Benefits of Our Network",
-        b1_title: "Quality Missions", b1_text: "Work with leading pharmaceutical, biotech, and cosmetic companies.",
-        b2_title: "Career Growth", b2_text: "Continuous learning opportunities and skill development.",
-        b3_title: "Competitive Rates", b3_text: "Fair compensation reflecting your expertise and experience.",
-        b4_title: "Support System", b4_text: "Ongoing support and guidance throughout your assignments.",
-        roles_label: "Opportunities", roles_title: "Roles We Recruit",
-        cta_careers_label: "Ready to Join?", cta_careers_title: "Submit Your Application", cta_careers_text: "Send us your CV and tell us about your experience. We'll match you with the right opportunities.", cta_careers_btn: "Apply Now →",
-        commitments_label: "Our Commitments", commitments_title: "Principles That Guide Us", commitments_subtitle: "Our values and commitments define how we work with partners and consultants.",
-        values_label: "Our Values", values_title: "What We Stand For",
-        v1_title: "Quality First", v1_text: "We never compromise on the quality of our consultants or services.",
-        v2_title: "Transparency", v2_text: "Clear communication and honest relationships with all stakeholders.",
-        v3_title: "Accountability", v3_text: "We stay engaged throughout every mission and take responsibility.",
-        v4_title: "Partnership", v4_text: "We build long-term relationships, not transactional arrangements.",
-        about_label: "About Us", about_title: "Expert Partners in Clinical Research", about_subtitle: "Connecting life sciences companies with qualified professionals since our founding.",
-        story_label: "Our Story", story_title: "How We Started",
-        story_text: "Consultant sur Mesure was founded with a clear mission: to revolutionize how life sciences companies find and work with clinical research professionals. Our founders, with decades of experience in pharmaceutical and biotech industries, saw a gap between what companies needed and what traditional staffing agencies offered. We built a boutique consulting firm focused on quality over quantity, expertise over generics, and long-term partnerships over transactional placements.",
-        mission_label: "Our Mission", mission_title: "What Drives Us",
-        mission_text: "To connect pharmaceutical, biomedical, and cosmetic companies with the most qualified clinical research experts, ensuring project success through personalized matching and ongoing support.",
-        team_label: "Our Team", team_title: "The People Behind Our Success",
-        contact_label: "Contact Us", contact_title: "Let's Start a Conversation", contact_subtitle: "Tell us about your needs and we'll get back to you within 24 hours.",
-        form_name: "Your Name", form_email: "Email Address", form_company: "Company (Optional)", form_subject: "Subject", form_message: "Your Message", form_submit: "Send Message", form_sending: "Sending...",
-        form_success: "Thank you! Your message has been sent successfully. We'll get back to you soon.",
-        form_error: "Sorry, there was an error sending your message. Please try again or email us directly.",
-        contact_info_label: "Contact Information", contact_info_title: "Get in Touch",
-        cta_label: "Ready to Start?", cta_title: "Let's Discuss Your Project", cta_text: "Tell us about your needs and discover how we can help secure talent for your projects.", cta_btn: "Contact Us →",
-        footer_text: "Expert Consulting Partner for Clinical Research.", footer_nav: "Navigation", footer_contact: "Contact", footer_legal: "Legal", footer_privacy: "Privacy Policy", footer_terms: "Terms of Service"
+
+        // HOMEPAGE REDESIGN
+        hero_title: "The alliance of clinical expertise and digital innovation",
+        hero_subtitle: "We support laboratories, CROs and biotechs by securing clinical operations and modernising their processes.",
+
+        who_title: "Who We Are",
+        who_block1: "A tailor-made consulting firm",
+        who_block2: "Dedicated to Labs, CROs and Biotechs",
+        who_block3: "Acting as a right-hand operational partner, not a simple provider",
+
+        expertise_title: "Our Expertise",
+        exp_left_title: "Clinical Operations",
+        exp_left_list: "• Clinical Research Associates (CRA)\n• Regulatory support\n• Medical writing",
+        exp_left_text: "Experienced experts to secure the quality and execution of your clinical trials.",
+
+        exp_right_title: "Digital Transformation",
+        exp_right_list: "• Digital audits\n• Zero-paper processes\n• eCRF / CTMS implementation\n• Team training",
+        exp_right_text: "We modernise your workflows to improve performance, compliance and efficiency.",
+
+        why_title: "Why Choose Us",
+        why_1_title: "Agile structure", why_1_text: "Small, fast and flexible",
+        why_2_title: "Double vision", why_2_text: "Human expertise + digital efficiency",
+        why_3_title: "Quality driven", why_3_text: "High standards, no compromise",
+        why_4_title: "International standards", why_4_text: "Aligned with global clinical requirements",
+
+        promise_text: "We secure your projects, your data, and your timelines.",
+        conviction_text: "Our approach is based on a simple conviction: The quality of clinical execution depends above all on the human, scientific and operational quality of the resources mobilized.",
+
+        comp_pillar1_title: "Clinical Operations Support",
+        comp_pillar1_text: "Securing the execution and quality of your clinical trials with certified experts.",
+        comp_pillar1_list: "• Clinical Research Associates (CRA)\n• Clinical Project Managers\n• Quality & Audits\n• Regulatory Affairs Support",
+        comp_pillar2_title: "Digital Transformation",
+        comp_pillar2_text: "Modernizing your clinical processes for higher efficiency and compliance.",
+        comp_pillar2_list: "• Digital Audits & Strategy\n• eCRF / CTMS Implementation\n• Zero-Paper Transition\n• Systems Training",
+
+        q_label: "Mission Fit Self-Assessment",
+        q_intro: "Help us understand your needs by answering 5 quick questions.",
+        form_attach: "Attach contact page and",
+        btn_submit_comp: "Review My Profile",
+
+        // Careers
+        careers_label: "Careers",
+        careers_title: "Build Your Career in Life Sciences",
+        careers_subtitle: "Join our network of professionals working on meaningful missions with leading companies.",
+        job_openings: "Active Opportunities",
+        job_level_senior: "Senior",
+        job_level_mid: "Mid-Level",
+        job_type_freelance: "Consultancy / Freelance",
+        btn_apply: "Apply for this role",
+
+        // About
+        ceo_about_title: "About Korka SALL",
+        ceo_about_subtitle: "CEO & Founder – Consultant sur Mesure",
+        ceo_bio: "With over 10 years of experience in the pharmaceutical industry, biotechs, and CROs, Korka SALL has built a career dedicated to clinical excellence and operational innovation.",
+        ceo_exp_title: "Core Expertise",
+        ceo_exp_text: "• Clinical Research Associate (CRA)\n• Clinical Project Manager\n• Lead Auditor\n• Clinical Operations Strategy\n• Digital Transformation Specialist",
+        ceo_mission: "My mission is based on three pillars: Commitment, Quality, and Transparency. We reveal and secure the human capital necessary for the success of your international clinical trials.",
+        team_see_title: "Meet the Team",
+
+        // Footer & Contact
+        footer_text: "Expert Consulting Partner for Clinical Research.",
+        contact_info_title: "Get in Touch",
+        contact_address: "44 rue Jean Mermoz, 78600 Maison-Laffitte",
+        contact_phone: "06 09 67 09 43",
+        contact_email: "rhconsultantsurmesure@gmail.com"
     },
     fr: {
         nav_home: "Accueil", nav_companies: "Entreprises", nav_careers: "Carrières", nav_commitments: "Engagements", nav_about: "À Propos", nav_contact: "Contact",
         motto: "Votre recherche, notre engagement opérationnel!",
-        companies_label: "Pour les Entreprises", companies_title: "Sécurisez Vos Projets de Recherche Clinique", companies_subtitle: "Partenez avec nous pour accéder à des consultants qualifiés.",
-        services_label: "Nos Services", services_title: "Solutions Sur Mesure pour Vos Besoins",
-        s1_title: "Attachés de Recherche Clinique", s1_text: "ARC expérimentés pour le monitoring des essais cliniques.",
-        s2_title: "Gestion des Données", s2_text: "Experts en conception et qualité des données cliniques.",
-        s3_title: "Affaires Réglementaires", s3_text: "Spécialistes des soumissions et conformité réglementaire.",
-        s4_title: "Assurance Qualité", s4_text: "Professionnels AQ pour l'audit et la conformité GCP/GMP.",
-        s5_title: "Rédaction Médicale", s5_text: "Rédacteurs pour les rapports d'études et documents réglementaires.",
-        s6_title: "Gestion de Projet", s6_text: "Chefs de projet pour programmes cliniques complexes.",
-        process_label: "Notre Méthode", process_title: "Notre Processus de Partenariat",
-        p1_title: "Comprendre", p1_text: "Nous analysons vos besoins et l'expertise requise.",
-        p2_title: "Matcher", p2_text: "Nous identifions le consultant idéal de notre réseau.",
-        p3_title: "Intégrer", p3_text: "Nous assurons une intégration fluide dans votre équipe.",
-        p4_title: "Accompagner", p4_text: "Nous fournissons un soutien continu tout au long de la mission.",
-        careers_label: "Carrières", careers_title: "Construisez Votre Carrière dans les Sciences de la Vie", careers_subtitle: "Rejoignez notre réseau de professionnels travaillant sur des missions significatives.",
-        benefits_label: "Pourquoi Nous Rejoindre", benefits_title: "Avantages de Notre Réseau",
-        b1_title: "Missions de Qualité", b1_text: "Travaillez avec des entreprises pharma, biotech et cosmétiques leaders.",
-        b2_title: "Évolution de Carrière", b2_text: "Opportunités de formation continue et développement des compétences.",
-        b3_title: "Tarifs Compétitifs", b3_text: "Rémunération équitable reflétant votre expertise.",
-        b4_title: "Système de Support", b4_text: "Accompagnement continu tout au long de vos missions.",
-        roles_label: "Opportunités", roles_title: "Postes que Nous Recrutons",
-        cta_careers_label: "Prêt à Nous Rejoindre?", cta_careers_title: "Soumettez Votre Candidature", cta_careers_text: "Envoyez-nous votre CV et parlez-nous de votre expérience.", cta_careers_btn: "Postuler →",
-        commitments_label: "Nos Engagements", commitments_title: "Principes Qui Nous Guident", commitments_subtitle: "Nos valeurs définissent notre façon de travailler.",
-        values_label: "Nos Valeurs", values_title: "Ce Que Nous Défendons",
-        v1_title: "Qualité d'Abord", v1_text: "Nous ne compromettons jamais la qualité de nos consultants.",
-        v2_title: "Transparence", v2_text: "Communication claire et relations honnêtes avec tous.",
-        v3_title: "Responsabilité", v3_text: "Nous restons engagés et assumons nos responsabilités.",
-        v4_title: "Partenariat", v4_text: "Nous construisons des relations durables.",
-        about_label: "À Propos", about_title: "Partenaires Experts en Recherche Clinique", about_subtitle: "Connectant les entreprises des sciences de la vie avec des professionnels qualifiés.",
-        story_label: "Notre Histoire", story_title: "Comment Nous Avons Commencé",
-        story_text: "Consultant sur Mesure a été fondé avec une mission claire : révolutionner la façon dont les entreprises trouvent des professionnels de la recherche clinique.",
-        mission_label: "Notre Mission", mission_title: "Ce Qui Nous Motive",
-        mission_text: "Connecter les entreprises pharmaceutiques, biomédicales et cosmétiques avec les experts les plus qualifiés.",
-        team_label: "Notre Équipe", team_title: "Les Personnes Derrière Notre Succès",
-        contact_label: "Contactez-Nous", contact_title: "Commençons une Conversation", contact_subtitle: "Parlez-nous de vos besoins et nous vous répondrons sous 24 heures.",
-        form_name: "Votre Nom", form_email: "Adresse Email", form_company: "Entreprise (Optionnel)", form_subject: "Sujet", form_message: "Votre Message", form_submit: "Envoyer", form_sending: "Envoi en cours...",
-        form_success: "Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.",
-        form_error: "Désolé, une erreur s'est produite. Veuillez réessayer ou nous contacter directement.",
-        contact_info_label: "Informations de Contact", contact_info_title: "Nous Contacter",
-        cta_label: "Prêt à Démarrer?", cta_title: "Discutons de Votre Projet", cta_text: "Parlez-nous de vos besoins.", cta_btn: "Contactez-Nous →",
-        footer_text: "Partenaire Conseil Expert en Recherche Clinique.", footer_nav: "Navigation", footer_contact: "Contact", footer_legal: "Mentions Légales", footer_privacy: "Confidentialité", footer_terms: "CGU"
+
+        // HOMEPAGE REDESIGN
+        hero_title: "L'alliance de l'expertise clinique et de l'innovation digitale",
+        hero_subtitle: "Nous accompagnons les laboratoires, CRO et biotechs en sécurisant les opérations cliniques et en modernisant leurs processus.",
+
+        who_title: "Qui Sommes-Nous",
+        who_block1: "Un cabinet de conseil sur mesure",
+        who_block2: "Dédié aux Labos, CRO et Biotechs",
+        who_block3: "Agissant comme un partenaire opérationnel de confiance, pas un simple prestataire",
+
+        expertise_title: "Notre Expertise",
+        exp_left_title: "Opérations Cliniques",
+        exp_left_list: "• Attachés de Recherche Clinique (ARC)\n• Support réglementaire\n• Rédaction médicale",
+        exp_left_text: "Des experts expérimentés pour sécuriser la qualité et l'exécution de vos essais cliniques.",
+
+        exp_right_title: "Transformation Digitale",
+        exp_right_list: "• Audits digitaux\n• Processus zéro papier\n• Implémentation eCRF / CTMS\n• Formation des équipes",
+        exp_right_text: "Nous modernisons vos flux de travail pour améliorer la performance, la conformité et l'efficacité.",
+
+        why_title: "Pourquoi Nous Choisir",
+        why_1_title: "Structure agile", why_1_text: "Petite, rapide et flexible",
+        why_2_title: "Double vision", why_2_text: "Expertise humaine + efficacité digitale",
+        why_3_title: "Orienté qualité", why_3_text: "Standards élevés, aucun compromis",
+        why_4_title: "Standards internationaux", why_4_text: "Aligné sur les exigences cliniques mondiales",
+
+        promise_text: "Nous sécurisons vos projets, vos données et vos délais.",
+        conviction_text: "Notre approche repose sur une conviction simple : La qualité de l'exécution clinique dépend avant tout de la qualité humaine, scientifique et opérationnelle des ressources mobilisées.",
+
+        // Company Page
+        comp_sectors_title: "Consultant Sur Mesure opère exclusivement dans les secteurs suivants :",
+        comp_sectors_list: "• Industrie Pharmaceutique\n• Biotechnologie\n• Dispositifs Médicaux\n• Cosmétique soumise à des exigences réglementaires strictes",
+        comp_profiles_title: "Profils couverts :",
+        comp_profiles_list: "• Attachés de Recherche Clinique (ARC)\n• Chefs de Projet Clinique\n• Data Managers\n• Profils Support aux Opérations Cliniques\n• Fonctions transverses liées aux essais cliniques",
+
+        q1: "1. De quel type d'expertise avez-vous besoin ?",
+        q1_opts: "(Opérations Cliniques / Qualité / Réglementaire / Data / Autre)",
+        q2: "2. Quand avez-vous besoin de support ?",
+        q2_opts: "(Immédiat / Sous 1–3 mois / Planifié)",
+        q3: "3. Où est basé le projet ?",
+        q3_opts: "(France / Europe / International)",
+        q4: "4. Quelle est la durée prévue ?",
+        q4_opts: "(Court terme / Long terme / Pas encore défini)",
+        q5: "5. Quel est le défi principal aujourd'hui ?",
+        q5_opts: "(Retard d'exécution / Pression de conformité / Problème de capacité / Autre)",
+        form_attach: "Joindre la page contact et",
+        btn_submit_comp: "Envoyer",
+
+        comp_pillar1_title: "Support aux Opérations Cliniques",
+        comp_pillar1_text: "Sécuriser l'exécution et la qualité de vos essais cliniques avec des experts certifiés.",
+        comp_pillar1_list: "• Attachés de Recherche Clinique (ARC)\n• Chefs de Projet Clinique\n• Qualité & Audits\n• Support aux Affaires Réglementaires",
+        comp_pillar2_title: "Transformation Digitale",
+        comp_pillar2_text: "Moderniser vos processus cliniques pour une plus grande efficacité et conformité.",
+        comp_pillar2_list: "• Audits Digitaux & Stratégie\n• Implémentation eCRF / CTMS\n• Transition Zéro-Papier\n• Formation aux Systèmes",
+
+        q_label: "Auto-Évaluation Mission Fit",
+        q_intro: "Aidez-nous à comprendre vos besoins en répondant à 5 questions rapides.",
+        form_attach: "Accéder au formulaire de contact et",
+        btn_submit_comp: "Vérifier Mon Profil",
+
+        // Carrières
+        careers_label: "Carrières",
+        careers_title: "Construisez Votre Carrière dans les Sciences de la Vie",
+        careers_subtitle: "Rejoignez notre réseau de professionnels travaillant sur des missions significatives.",
+        job_openings: "Opportunités Actuelles",
+        job_level_senior: "Sénior",
+        job_level_mid: "Confirmé",
+        job_type_freelance: "Conseil / Freelance",
+        btn_apply: "Postuler à cette offre",
+
+        // À Propos
+        ceo_about_title: "À propos de Korka SALL",
+        ceo_about_subtitle: "CEO & Fondatrice – Consultant sur Mesure",
+        ceo_bio: "Avec plus de 10 ans d'expérience dans l'industrie pharmaceutique, les biotechs et les CRO, Korka SALL a bâti une carrière dédiée à l'excellence clinique et à l'innovation opérationnelle.",
+        ceo_exp_title: "Expertise Clé",
+        ceo_exp_text: "• Attachée de Recherche Clinique (ARC)\n• Chef de Projet Clinique\n• Lead Auditor\n• Stratégie des Opérations Cliniques\n• Spécialiste Transformation Digitale",
+        ceo_mission: "Ma mission repose sur trois piliers : Engagement, Qualité et Transparence. Nous révélons et sécurisons le capital humain nécessaire au succès de vos essais cliniques internationaux.",
+        team_see_title: "Rencontrez l'équipe",
+
+        // Footer & Contact
+        footer_text: "Partenaire Conseil Expert en Recherche Clinique.",
+        contact_info_title: "Nous Contacter",
+        contact_address: "44 rue Jean Mermoz, 78600 Maison-Laffitte",
+        contact_phone: "06 09 67 09 43",
+        contact_email: "rhconsultantsurmesure@gmail.com",
+        contact_linkedin: "https://www.linkedin.com/company/consultant-sur-mesure/",
+        ceo_linkedin: "https://linkedin.com/in/korka-sall-kebe"
     }
 };
 
@@ -133,8 +205,68 @@ if (hamburger && mobileNav) {
     });
 }
 
-// Scroll animations
+// Slider Logic
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prevBtn = document.querySelector('.slider-arrow.prev');
+const nextBtn = document.querySelector('.slider-arrow.next');
+const progressBar = document.querySelector('.progress-bar');
+
+if (slides.length > 0) {
+    let currentSlide = 0;
+    let autoPlayTimer;
+    let progressValue = 0;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        progressValue = 0;
+        if (progressBar) progressBar.style.width = '0%';
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', () => { goToSlide(currentSlide - 1); resetAutoPlay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { goToSlide(currentSlide + 1); resetAutoPlay(); });
+    dots.forEach((dot, idx) => dot.addEventListener('click', () => { goToSlide(idx); resetAutoPlay(); }));
+
+    function startAutoPlay() {
+        autoPlayTimer = setInterval(() => {
+            progressValue += 1;
+            if (progressBar) progressBar.style.width = progressValue + '%';
+            if (progressValue >= 100) goToSlide(currentSlide + 1);
+        }, 50);
+    }
+    function resetAutoPlay() { clearInterval(autoPlayTimer); startAutoPlay(); }
+    startAutoPlay();
+}
+
+// Scroll animations & Counters
+const animateCounter = (el) => {
+    const target = parseInt(el.dataset.count);
+    const duration = 2000;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            el.textContent = target + (el.parentElement.querySelector('.stat-label')?.textContent.includes('%') ? '' : '+');
+            clearInterval(timer);
+        } else {
+            el.textContent = Math.floor(current);
+        }
+    }, 16);
+};
+
 const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            const counter = entry.target.querySelector('.stat-number');
+            if (counter && counter.dataset.count) animateCounter(counter);
+        }
+    });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
 document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
