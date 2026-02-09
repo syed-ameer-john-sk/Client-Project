@@ -2533,3 +2533,866 @@ body::before {
         gap: 32px;
     }
 }
+
+/* ========================================
+   COMPREHENSIVE RESPONSIVE STYLES
+   Mobile-first approach for all devices
+   ======================================== */
+
+/* TABLET LANDSCAPE (1024px and below) */
+@media (max-width: 1024px) {
+    :root {
+        --header-height: 70px;
+    }
+
+    .header {
+        width: calc(100% - 40px);
+        padding: 0 24px;
+        top: 20px;
+    }
+
+    .container {
+        padding: 0 24px;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        max-width: 700px;
+        padding: 0 24px;
+    }
+
+    .pillar-container {
+        gap: 24px;
+    }
+
+    .service-pillar {
+        padding: 32px;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .who-we-are-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .expertise-pillars {
+        gap: 24px;
+    }
+
+    .pillar-card {
+        padding: 32px;
+    }
+}
+
+/* TABLET PORTRAIT (900px and below) */
+@media (max-width: 900px) {
+    .header {
+        width: calc(100% - 32px);
+        height: 64px;
+        padding: 0 20px;
+        top: 16px;
+        border-radius: 32px;
+    }
+
+    .atom-wrapper {
+        width: 45px;
+        height: 45px;
+    }
+
+    .brand-main {
+        font-size: 1.2rem;
+    }
+
+    .brand-sub {
+        font-size: 0.55rem;
+    }
+
+    .logo-container {
+        gap: 12px;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 120px 20px 60px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3.5rem);
+    }
+
+    .hero-text {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+
+    .hero-btns .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .page-hero {
+        height: auto;
+        min-height: 50vh;
+        padding: 120px 20px 60px;
+    }
+
+    .page-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .pillar-container {
+        flex-direction: column;
+    }
+
+    .service-pillar {
+        width: 100%;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .process-step {
+        padding: 24px;
+    }
+
+    .clarity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .clarity-card {
+        padding: 32px;
+    }
+
+    .featured-diagnostic {
+        padding: 32px;
+    }
+
+    #missionFitForm {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .who-we-are-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .who-block {
+        padding: 32px;
+    }
+
+    .expertise-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .trust-block {
+        padding: 24px 16px;
+    }
+
+    .slider-arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    .slider-arrow.prev {
+        left: 16px;
+    }
+
+    .slider-arrow.next {
+        right: 16px;
+    }
+}
+
+/* MOBILE LANDSCAPE (768px and below) */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .card {
+        padding: 32px;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .testimonials-grid {
+        gap: 24px;
+    }
+
+    .testimonial-card {
+        padding: 28px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .team-card {
+        padding: 32px;
+    }
+
+    .team-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .ceo-image {
+        width: 280px;
+        height: 340px;
+    }
+
+    .footer {
+        padding: 60px 20px 32px;
+    }
+
+    .footer-grid {
+        gap: 32px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand-name {
+        font-size: 1.4rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .benefit-icon-circle {
+        width: 70px;
+        height: 70px;
+    }
+
+    .benefit-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* MOBILE PORTRAIT (600px and below) */
+@media (max-width: 600px) {
+    .header {
+        width: calc(100% - 24px);
+        height: 60px;
+        padding: 0 16px;
+        top: 12px;
+        border-radius: 30px;
+    }
+
+    .header.scrolled {
+        top: 8px;
+    }
+
+    .atom-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .brand-main {
+        font-size: 1rem;
+    }
+
+    .brand-sub {
+        font-size: 0.5rem;
+        letter-spacing: 0.1em;
+    }
+
+    .logo-container {
+        gap: 10px;
+    }
+
+    .lang-btn {
+        padding: 6px 12px;
+        font-size: 0.65rem;
+    }
+
+    .hamburger span {
+        width: 20px;
+    }
+
+    .mobile-nav a {
+        font-size: 1.25rem;
+    }
+
+    .hero {
+        padding: 100px 16px 50px;
+        min-height: 100vh;
+    }
+
+    .hero-label {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.75rem, 7vw, 2.5rem);
+        margin-bottom: 16px;
+    }
+
+    .hero-text {
+        font-size: 0.9rem;
+        margin-bottom: 28px;
+    }
+
+    .hero-btns .btn {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    .page-hero {
+        min-height: 45vh;
+        padding: 100px 16px 50px;
+    }
+
+    .page-label {
+        font-size: 0.65rem;
+        padding: 6px 12px;
+    }
+
+    .page-title {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+
+    .page-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-label {
+        font-size: 0.65rem;
+    }
+
+    .section-title {
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+    }
+
+    .section-header {
+        margin-bottom: 32px;
+    }
+
+    .service-pillar {
+        padding: 24px;
+    }
+
+    .service-pillar h3 {
+        font-size: 1.25rem;
+    }
+
+    .service-pillar-list li {
+        font-size: 0.9rem;
+        padding: 8px 0;
+    }
+
+    .card-icon {
+        width: 52px;
+        height: 52px;
+        margin-bottom: 20px;
+    }
+
+    .process-step {
+        padding: 20px;
+    }
+
+    .process-number {
+        width: 48px;
+        height: 48px;
+        font-size: 1.25rem;
+    }
+
+    .process-title {
+        font-size: 1.1rem;
+    }
+
+    .process-text {
+        font-size: 0.9rem;
+    }
+
+    .featured-diagnostic {
+        padding: 24px;
+        margin-top: 40px !important;
+    }
+
+    .featured-diagnostic .section-header {
+        margin-bottom: 24px !important;
+    }
+
+    .featured-diagnostic .section-title {
+        font-size: 1.2rem !important;
+    }
+
+    .form-label {
+        font-size: 0.85rem;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn {
+        padding: 14px 24px;
+        font-size: 0.9rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-item {
+        padding: 20px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .clarity-card {
+        padding: 24px;
+    }
+
+    .clarity-title {
+        font-size: 1.2rem;
+    }
+
+    .clarity-list li {
+        font-size: 0.9rem;
+        gap: 12px;
+    }
+
+    .testimonial-card {
+        padding: 24px;
+    }
+
+    .testimonial-quote {
+        font-size: 0.95rem;
+        margin-bottom: 24px;
+    }
+
+    .testimonial-avatar {
+        width: 48px;
+        height: 48px;
+        font-size: 1rem;
+    }
+
+    .ceo-profile {
+        gap: 32px;
+    }
+
+    .ceo-image {
+        width: 240px;
+        height: 300px;
+    }
+
+    .ceo-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .ceo-role {
+        font-size: 1rem;
+    }
+
+    .ceo-bio {
+        font-size: 0.9rem;
+    }
+
+    .ceo-quote {
+        padding: 20px;
+        font-size: 0.95rem;
+    }
+
+    .ceo-linkedin-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
+    .team-card {
+        padding: 24px;
+    }
+
+    .team-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .team-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-role {
+        font-size: 0.9rem;
+    }
+
+    .contact-form-card,
+    .contact-info-card {
+        padding: 28px;
+    }
+
+    .info-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .info-title {
+        font-size: 1.1rem;
+    }
+
+    .info-text {
+        font-size: 0.9rem;
+    }
+
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-block {
+        padding: 20px;
+    }
+
+    .trust-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .who-block {
+        padding: 24px;
+    }
+
+    .pillar-card {
+        padding: 24px;
+    }
+
+    .pillar-title {
+        font-size: 1.4rem;
+    }
+
+    .pillar-list li {
+        font-size: 0.9rem;
+    }
+
+    .footer-brand-name {
+        font-size: 1.2rem;
+    }
+
+    .footer-brand-text,
+    .footer-links a {
+        font-size: 0.85rem;
+    }
+
+    .footer-col-title {
+        font-size: 0.7rem;
+        margin-bottom: 16px;
+    }
+
+    .slider-dots {
+        bottom: 24px;
+    }
+
+    .dot {
+        width: 24px;
+        height: 3px;
+    }
+
+    .dot.active {
+        width: 36px;
+    }
+
+    .scroll-indicator {
+        bottom: 20px;
+    }
+
+    /* Job Cards Mobile */
+    .jobs-grid {
+        margin-top: 24px;
+    }
+
+    .job-card {
+        padding: 20px;
+    }
+
+    .job-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .job-title {
+        font-size: 1.1rem;
+    }
+
+    .job-tag {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+    }
+
+    .job-details {
+        gap: 16px;
+        font-size: 0.8rem;
+        margin-left: 0;
+        flex-wrap: wrap;
+    }
+}
+
+/* SMALL MOBILE (480px and below) */
+@media (max-width: 480px) {
+    .header {
+        width: calc(100% - 20px);
+        height: 56px;
+        padding: 0 12px;
+    }
+
+    .brand-main {
+        font-size: 0.9rem;
+    }
+
+    .brand-sub {
+        display: none;
+    }
+
+    .atom-wrapper {
+        width: 36px;
+        height: 36px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 8vw, 2rem);
+    }
+
+    .hero-text {
+        font-size: 0.85rem;
+    }
+
+    .hero-btns .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .page-title {
+        font-size: clamp(1.3rem, 7vw, 1.8rem);
+    }
+
+    .section-title {
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.85rem;
+    }
+
+    .service-pillar {
+        padding: 20px;
+    }
+
+    .service-pillar h3 {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.75rem;
+    }
+
+    .footer-social a {
+        margin-left: 12px;
+        font-size: 1rem;
+    }
+}
+
+/* LANDSCAPE ORIENTATION FIX */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px 40px;
+    }
+
+    .hero-title {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+    }
+
+    .hero-text {
+        margin-bottom: 20px;
+    }
+
+    .page-hero {
+        height: auto;
+        min-height: 80vh;
+        padding: 100px 20px 40px;
+    }
+
+    .mobile-nav {
+        padding-top: 80px;
+        gap: 16px;
+    }
+
+    .mobile-nav a {
+        font-size: 1.1rem;
+    }
+}
+
+/* HIGH DPI SCREENS */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .atom-ring {
+        border-width: 1.5px;
+    }
+}
+
+/* TOUCH DEVICE IMPROVEMENTS */
+@media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+        transform: none;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .service-pillar:hover {
+        transform: none;
+    }
+
+    .team-card:hover {
+        transform: none;
+    }
+
+    .testimonial-card:hover {
+        transform: none;
+    }
+
+    .who-block:hover {
+        transform: none;
+    }
+
+    .nav a::after {
+        display: none;
+    }
+
+    /* Improve tap targets */
+    .btn {
+        min-height: 48px;
+    }
+
+    .nav a {
+        padding: 12px 8px;
+    }
+
+    .hamburger {
+        padding: 12px;
+    }
+
+    .slider-arrow {
+        min-width: 48px;
+        min-height: 48px;
+    }
+}
+
+/* PRINT STYLES */
+@media print {
+
+    .header,
+    .mobile-nav,
+    .slider-arrow,
+    .slider-dots,
+    .scroll-indicator,
+    .hero-slider {
+        display: none !important;
+    }
+
+    .hero {
+        height: auto;
+        min-height: auto;
+        padding: 40px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    body::before {
+        display: none;
+    }
+}
