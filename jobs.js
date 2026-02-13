@@ -5,7 +5,7 @@
 
 // Unique Callback Name to avoid collisions
 const CALLBACK_NAME = 'csm_jobs_callback';
-const BASE_URL = 'https://docs.google.com/spreadsheets/d/1cIDSBxpqz8AXTuMnuQ_A2iTFZCGHwdBbrVxPAiZw1Nc/gviz/tq';
+const BASE_URL = 'https://docs.google.com/spreadsheets/d/1mG7xcokbcHSAHLszRnP-ebmLsY4f5Xav2R7fDSI3JMM/gviz/tq';
 
 document.addEventListener('DOMContentLoaded', () => {
     initJobLoader();

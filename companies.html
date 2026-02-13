@@ -271,8 +271,8 @@
     <script src="shared.js"></script>
     <script>
         // EmailJS Configuration (same credentials as contact page)
-        const EMAILJS_PUBLIC_KEY = 'gz0DYtYutbSFtpZq5';
-        const EMAILJS_SERVICE_ID = 'service_k13xenc';
+        const EMAILJS_PUBLIC_KEY = 'esO_u4Q4zeoE2dvT7';
+        const EMAILJS_SERVICE_ID = 'service_2id3c9l';
         emailjs.init(EMAILJS_PUBLIC_KEY);
 
         const missionForm = document.getElementById('missionFitForm');
@@ -334,14 +334,30 @@
 
             const templateParams = {
                 user_name: visitorEmail,
-                user_email: 'sksyedroshan007@gmail.com',
+                user_email: visitorEmail,
+                email: visitorEmail,
+                reply_to: visitorEmail,
+                to_email: visitorEmail,
                 from_name: 'Mission Fit Form',
                 subject: 'New Mission Fit Self-Assessment Submission',
                 message: messageBody
             };
 
             try {
-                await emailjs.send(EMAILJS_SERVICE_ID, 'template_ytw1wzz', templateParams);
+                // 1. Send notification to owner
+                try {
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_dg8uz9p', templateParams);
+                } catch (err1) {
+                    console.error('Owner notification failed:', err1);
+                    // Continue to attempt auto-reply if owner notification fails
+                }
+
+                // 2. Send auto-reply to visitor
+                try {
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_llokeva', templateParams);
+                } catch (err2) {
+                    console.warn('Auto-reply failed:', err2);
+                }
 
                 const successMsg = lang === 'fr'
                     ? 'Merci ! Vos réponses ont été soumises avec succès.'

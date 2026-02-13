@@ -245,8 +245,8 @@
     <script src="shared.js"></script>
     <script>
         // EmailJS Configuration
-        const EMAILJS_PUBLIC_KEY = 'gz0DYtYutbSFtpZq5';
-        const EMAILJS_SERVICE_ID = 'service_k13xenc';
+        const EMAILJS_PUBLIC_KEY = 'esO_u4Q4zeoE2dvT7';
+        const EMAILJS_SERVICE_ID = 'service_2id3c9l';
 
         // Initialize EmailJS
         emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -276,9 +276,9 @@
             const templateParams = {
                 user_name: document.getElementById('userName').value,
                 user_email: document.getElementById('userEmail').value,
-                email: document.getElementById('userEmail').value, // Standard alias
-                reply_to: document.getElementById('userEmail').value, // Standard alias
-                to_email: document.getElementById('userEmail').value, // Standard alias
+                email: document.getElementById('userEmail').value,
+                reply_to: document.getElementById('userEmail').value,
+                to_email: document.getElementById('userEmail').value,
                 from_name: document.getElementById('userName').value,
                 user_company: document.getElementById('userCompany').value || 'Not specified',
                 subject: document.getElementById('subject').value,
@@ -288,7 +288,7 @@
             try {
                 // 1. Send notification to owner
                 try {
-                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_ytw1wzz', templateParams);
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_dg8uz9p', templateParams);
                 } catch (err1) {
                     console.error('Owner notification failed:', err1);
                     throw new Error('Owner template error: ' + (err1.text || err1.status));
@@ -296,7 +296,7 @@
 
                 // 2. Send auto-reply to sender
                 try {
-                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_iqtvzkw', templateParams);
+                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_llokeva', templateParams);
                 } catch (err2) {
                     console.warn('Auto-reply failed (Owner notified anyway):', err2);
                     // We don't necessarily want to block success if just the auto-reply fails
