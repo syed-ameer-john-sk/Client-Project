@@ -3398,3 +3398,298 @@ body::before {
         display: none;
     }
 }
+
+/* NOTIFICATION BANNER */
+.notification {
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    margin-bottom: 16px;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.notification.success {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+.notification.error {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+/* GDPR CHECKBOX */
+.gdpr-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+.gdpr-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    accent-color: var(--primary);
+    margin-top: 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.gdpr-checkbox span {
+    user-select: none;
+}
+
+/* ============================================
+   INNER PAGE DESIGN ENHANCEMENTS
+   ============================================ */
+
+/* SECTION DIVIDER — subtle gradient line */
+.section-divider {
+    width: 100%;
+    max-width: 200px;
+    height: 3px;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    border: none;
+    border-radius: 2px;
+    opacity: 0.5;
+}
+
+/* FEATURE CARD — premium bordered card for text content */
+.feature-card {
+    background: var(--white);
+    border: 1px solid rgba(15, 118, 110, 0.1);
+    border-radius: 20px;
+    padding: 48px 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(15, 118, 110, 0.08);
+}
+
+.feature-card .feature-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+/* STAT ROW — horizontal key figures */
+.stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 140px;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    font-weight: 500;
+}
+
+/* ENHANCED TRUST BLOCKS (Commitments values) */
+.trust-block {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 32px 28px;
+    border-left: 4px solid var(--primary);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.trust-block:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(15, 118, 110, 0.1);
+}
+
+/* ENHANCED CONVICTION BOX — glassmorphism dark card */
+.conviction-box {
+    background: linear-gradient(135deg, var(--dark) 0%, #0c1e2c 100%);
+    border: 1px solid rgba(15, 118, 110, 0.3);
+    border-radius: 20px;
+    padding: 48px 40px;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.conviction-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(15, 118, 110, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.conviction-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.15rem;
+    line-height: 1.8;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ENHANCED BENEFIT ITEMS (Careers) */
+.benefit-item {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid rgba(15, 118, 110, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(15, 118, 110, 0.1);
+    border-color: rgba(15, 118, 110, 0.2);
+}
+
+/* WHY-CONTACT HIGHLIGHTS ROW */
+.highlights-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid rgba(15, 118, 110, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.highlight-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.08);
+}
+
+.highlight-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.highlight-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.highlight-text {
+    font-size: 0.88rem;
+    color: var(--gray-text);
+    line-height: 1.5;
+}
+
+/* CTA SECTION for inner pages (reusable dark banner) */
+.cta-content {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.cta-content .section-label {
+    color: rgba(45, 212, 191, 0.8);
+}
+
+.cta-content .section-title {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.cta-text {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .stat-row {
+        gap: 32px;
+    }
+
+    .stat-item {
+        min-width: 100px;
+    }
+
+    .highlights-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .feature-card {
+        padding: 32px 24px;
+    }
+
+    .conviction-box {
+        padding: 32px 24px;
+    }
+}

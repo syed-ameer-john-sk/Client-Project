@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -127,6 +129,8 @@
                         by answering 5 quick questions.</h2>
                 </div>
 
+                <div id="missionNotification" class="notification"></div>
+
                 <form id="missionFitForm"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: end;">
                     <div class="form-group">
@@ -173,15 +177,19 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    <div class="form-group" style="display: flex; flex-direction: column; gap: 16px;">
-                        <div style="font-size: 0.9rem; color: var(--gray-text);">
-                            <span data-i18n="form_attach">Attach contact page and</span>
-                            <a href="contact.html"
-                                style="color: var(--primary); font-weight: 700; text-decoration: none;"
-                                data-i18n="nav_contact">Contact Us</a>
-                        </div>
-                        <a href="contact.html" class="btn btn-primary" style="width: 100%; text-align: center;"
-                            data-i18n="btn_submit_comp">Review My Profile</a>
+                    <div class="form-group">
+                        <label class="form-label" data-i18n="form_your_email">Your Email *</label>
+                        <input type="email" class="form-input" name="visitor_email" id="visitorEmail"
+                            placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label class="gdpr-checkbox">
+                            <input type="checkbox" id="gdprConsent" required>
+                            <span data-i18n="gdpr_consent">I agree to the Terms & Conditions and consent to the
+                                processing of my data.</span>
+                        </label>
+                        <button type="submit" class="btn btn-primary" id="submitMissionBtn"
+                            style="width: 100%; margin-top: 16px;" data-i18n="btn_submit_form">Submit</button>
                     </div>
                 </form>
             </div>
@@ -243,7 +251,7 @@
                 <div>
                     <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:rhconsultantsurmesure@gmail.com">rhconsultantsurmesure@gmail.com</a></li>
+                        <li><a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a></li>
                         <li><a href="tel:+33609670943">06 09 67 09 43</a></li>
                     </ul>
                 </div>
@@ -261,6 +269,97 @@
         </div>
     </footer>
     <script src="shared.js"></script>
+    <script>
+        // EmailJS Configuration (same credentials as contact page)
+        const EMAILJS_PUBLIC_KEY = 'gz0DYtYutbSFtpZq5';
+        const EMAILJS_SERVICE_ID = 'service_k13xenc';
+        emailjs.init(EMAILJS_PUBLIC_KEY);
+
+        const missionForm = document.getElementById('missionFitForm');
+        const submitMissionBtn = document.getElementById('submitMissionBtn');
+        const missionNotification = document.getElementById('missionNotification');
+
+        function getCurrentLang() {
+            return localStorage.getItem('site_lang') || 'en';
+        }
+
+        function showMissionNotification(type, message) {
+            missionNotification.className = 'notification ' + type + ' show';
+            missionNotification.textContent = message;
+            setTimeout(() => missionNotification.classList.remove('show'), 8000);
+        }
+
+        missionForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const lang = getCurrentLang();
+            const q1 = missionForm.q1.value;
+            const q2 = missionForm.q2.value;
+            const q3 = missionForm.q3.value.trim();
+            const q4 = missionForm.q4.value;
+            const q5 = missionForm.q5.value;
+            const visitorEmail = document.getElementById('visitorEmail').value.trim();
+            const gdpr = document.getElementById('gdprConsent').checked;
+
+            // Validate all fields
+            if (!q1 || !q2 || !q3 || !q4 || !q5 || !visitorEmail || !gdpr) {
+                const msg = lang === 'fr'
+                    ? 'Veuillez remplir toutes les questions et accepter les conditions.'
+                    : 'Please fill in all questions and accept the terms.';
+                showMissionNotification('error', msg);
+                return;
+            }
+
+            const originalText = submitMissionBtn.textContent;
+            submitMissionBtn.disabled = true;
+            submitMissionBtn.textContent = lang === 'fr' ? 'Envoi en cours...' : 'Sending...';
+
+            // Build a formatted message from the 5 answers
+            const labels = lang === 'fr'
+                ? ['Type d\'expertise', 'Délai de support', 'Localisation du projet', 'Durée prévue', 'Défi principal']
+                : ['Expertise needed', 'Support timeline', 'Project location', 'Expected duration', 'Main challenge'];
+
+            const messageBody = [
+                `--- Mission Fit Self-Assessment ---`,
+                ``,
+                `1. ${labels[0]}: ${q1}`,
+                `2. ${labels[1]}: ${q2}`,
+                `3. ${labels[2]}: ${q3}`,
+                `4. ${labels[3]}: ${q4}`,
+                `5. ${labels[4]}: ${q5}`,
+                ``,
+                `Contact Email: ${visitorEmail}`,
+                `(GDPR consent given)`
+            ].join('\n');
+
+            const templateParams = {
+                user_name: visitorEmail,
+                user_email: 'sksyedroshan007@gmail.com',
+                from_name: 'Mission Fit Form',
+                subject: 'New Mission Fit Self-Assessment Submission',
+                message: messageBody
+            };
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, 'template_ytw1wzz', templateParams);
+
+                const successMsg = lang === 'fr'
+                    ? 'Merci ! Vos réponses ont été soumises avec succès.'
+                    : 'Thank you! Your responses have been submitted successfully.';
+                showMissionNotification('success', successMsg);
+                missionForm.reset();
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                const errorMsg = lang === 'fr'
+                    ? 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement.'
+                    : 'An error occurred. Please try again or contact us directly.';
+                showMissionNotification('error', errorMsg);
+            } finally {
+                submitMissionBtn.disabled = false;
+                submitMissionBtn.textContent = originalText;
+            }
+        });
+    </script>
 </body>
 
 </html>

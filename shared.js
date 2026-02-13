@@ -70,6 +70,9 @@ const translations = {
         q5_opts: "(Select an option)",
         form_attach: "Attach contact page and",
         btn_submit_comp: "Review My Profile",
+        btn_submit_form: "Submit",
+        form_your_email: "Your Email *",
+        gdpr_consent: "I agree to the Terms & Conditions and consent to the processing of my data.",
         process_label: "How We Work",
         process_title: "Our Partnership Process",
         p1_title: "Understand", p1_text: "We analyze your project requirements and expertise needs.",
@@ -93,9 +96,9 @@ const translations = {
         job_level_senior: "Senior",
         job_level_mid: "Mid-Level",
         job_type_freelance: "Consultancy / Freelance",
-        cta_careers_label: "Ready to Join?",
-        cta_careers_title: "Submit Your Application",
-        cta_careers_text: "Send us your CV and tell us about your experience. We'll match you with the right opportunities.",
+        cta_careers_label: "Unsolicited Applications Welcome",
+        cta_careers_title: "Don't See a Matching Role?",
+        cta_careers_text: "No worries! Send us your CV and tell us about your experience. We welcome unsolicited applications and will match you with the right opportunities as they arise.",
         btn_apply: "Apply Now →",
 
         // ABOUT PAGE
@@ -117,6 +120,10 @@ const translations = {
         ceo_exp_text: "• Clinical Research Associate (CRA)\n• Clinical Project Manager\n• Lead Auditor\n• Clinical Operations Strategy\n• Digital Transformation Specialist",
         ceo_mission: "My mission is based on three pillars: Commitment, Quality, and Transparency. We reveal and secure the human capital necessary for the success of your international clinical trials.",
         team_see_title: "Meet the Team",
+        cta_about_label: "Get in Touch",
+        cta_about_title: "Let's Discuss Your Project",
+        cta_about_text: "Whether you need expert consultants or want to join our network, we'd love to hear from you.",
+        btn_contact_us: "Contact Us →",
 
         // CONTACT PAGE
         contact_label: "Contact Us",
@@ -132,7 +139,13 @@ const translations = {
         contact_info_title: "Get in Touch",
         contact_address: "44 rue Jean Mermoz, 78600 Maison-Laffitte",
         contact_phone: "06 09 67 09 43",
-        contact_email: "rhconsultantsurmesure@gmail.com",
+        contact_email: "consultantsurmesure@gmail.com",
+        why_response: "24h Response",
+        why_response_text: "We reply to every inquiry within one business day.",
+        why_gdpr: "GDPR Compliant",
+        why_gdpr_text: "Your data is handled securely in full compliance with European regulations.",
+        why_worldwide: "Worldwide Coverage",
+        why_worldwide_text: "Based in France, operating across Europe and expanding globally.",
 
         // COMMITMENTS PAGE
         commitments_label: "Our Commitments",
@@ -144,6 +157,15 @@ const translations = {
         v2_title: "Transparency", v2_text: "Clear communication and honest relationships with all stakeholders.",
         v3_title: "Accountability", v3_text: "We stay engaged throughout every mission and take responsibility.",
         v4_title: "Partnership", v4_text: "We build long-term relationships, not transactional arrangements.",
+        figures_label: "Key Figures",
+        figures_title: "Our Impact in Numbers",
+        stat_years: "Years of Experience",
+        stat_consultants: "Expert Consultants",
+        stat_satisfaction: "Client Satisfaction",
+        cta_commit_label: "Ready to Partner?",
+        cta_commit_title: "Let's Work Together",
+        cta_commit_text: "Discover how our values translate into results for your clinical projects.",
+        conviction_text: "Our approach is based on a simple conviction: The quality of clinical execution depends above all on the human, scientific and operational quality of the resources mobilized.",
 
         // FOOTER
         footer_text: "Expert Consulting Partner for Clinical Research.",
@@ -223,6 +245,9 @@ const translations = {
         q5_opts: "(Option de sélection)",
         form_attach: "Accéder au formulaire de contact et",
         btn_submit_comp: "Vérifier Mon Profil",
+        btn_submit_form: "Soumettre",
+        form_your_email: "Votre Email *",
+        gdpr_consent: "J'accepte les Conditions Générales et consens au traitement de mes données.",
         process_label: "Comment nous travaillons",
         process_title: "Notre processus de partenariat",
         p1_title: "Comprendre", p1_text: "Nous analysons vos exigences de projet et vos besoins en expertise.",
@@ -246,9 +271,9 @@ const translations = {
         job_level_senior: "Sénior",
         job_level_mid: "Confirmé",
         job_type_freelance: "Conseil / Freelance",
-        cta_careers_label: "Prêt à rejoindre ?",
-        cta_careers_title: "Soumettez votre candidature",
-        cta_careers_text: "Envoyez-nous votre CV et parlez-nous de votre expérience. Nous vous proposerons des opportunités adaptées.",
+        cta_careers_label: "Candidatures spontanées bienvenues",
+        cta_careers_title: "Aucun poste ne vous correspond ?",
+        cta_careers_text: "Pas de souci ! Envoyez-nous votre CV et parlez-nous de votre expérience. Nous acceptons les candidatures spontanées et vous proposerons des opportunités adaptées.",
         btn_apply: "Postuler Maintenant →",
 
         // ABOUT PAGE
@@ -270,6 +295,10 @@ const translations = {
         ceo_exp_text: "• Attachée de Recherche Clinique (ARC)\n• Chef de Projet Clinique\n• Lead Auditor\n• Stratégie des Opérations Cliniques\n• Spécialiste Transformation Digitale",
         ceo_mission: "Ma mission repose sur trois piliers : Engagement, Qualité et Transparence. Nous sécurisons le capital humain nécessaire au succès de vos essais cliniques.",
         team_see_title: "Rencontrez l'équipe",
+        cta_about_label: "Nous contacter",
+        cta_about_title: "Discutons de votre projet",
+        cta_about_text: "Que vous ayez besoin de consultants experts ou souhaitiez rejoindre notre réseau, contactez-nous.",
+        btn_contact_us: "Contactez-nous →",
 
         // CONTACT PAGE
         contact_label: "Contactez-nous",
@@ -285,7 +314,13 @@ const translations = {
         contact_info_title: "Nous Contacter",
         contact_address: "44 rue Jean Mermoz, 78600 Maison-Laffitte",
         contact_phone: "06 09 67 09 43",
-        contact_email: "rhconsultantsurmesure@gmail.com",
+        contact_email: "consultantsurmesure@gmail.com",
+        why_response: "Réponse sous 24h",
+        why_response_text: "Nous répondons à chaque demande dans un délai d'un jour ouvrable.",
+        why_gdpr: "Conforme RGPD",
+        why_gdpr_text: "Vos données sont traitées en toute sécurité, conformément aux réglementations européennes.",
+        why_worldwide: "Couverture Mondiale",
+        why_worldwide_text: "Basés en France, actifs en Europe et en pleine expansion mondiale.",
 
         // COMMITMENTS PAGE
         commitments_label: "Nos Engagements",
@@ -297,6 +332,15 @@ const translations = {
         v2_title: "Transparence", v2_text: "Une communication claire et des relations honnêtes avec toutes les parties prenantes.",
         v3_title: "Responsabilité", v3_text: "Nous restons impliqués tout au long de chaque mission et assumons nos responsabilités.",
         v4_title: "Partenariat", v4_text: "Nous construisons des relations à long terme, pas des arrangements transactionnels.",
+        figures_label: "Chiffres Clés",
+        figures_title: "Notre impact en chiffres",
+        stat_years: "Années d'expérience",
+        stat_consultants: "Consultants experts",
+        stat_satisfaction: "Satisfaction client",
+        cta_commit_label: "Prêt à collaborer ?",
+        cta_commit_title: "Travaillons ensemble",
+        cta_commit_text: "Découvrez comment nos valeurs se traduisent en résultats pour vos projets cliniques.",
+        conviction_text: "Notre approche repose sur une conviction simple : la qualité de l'exécution clinique dépend avant tout de la qualité humaine, scientifique et opérationnelle des ressources mobilisées.",
 
         // FOOTER
         footer_text: "Partenaire Conseil Expert en Recherche Clinique.",
