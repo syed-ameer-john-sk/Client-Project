@@ -146,6 +146,7 @@ const translations = {
         why_gdpr_text: "Your data is handled securely in full compliance with European regulations.",
         why_worldwide: "Worldwide Coverage",
         why_worldwide_text: "Based in France, operating across Europe and expanding globally.",
+        gdpr_consent: "I agree to the Terms & Conditions and consent to the processing of my data.",
 
         // COMMITMENTS PAGE
         commitments_label: "Our Commitments",
@@ -321,6 +322,7 @@ const translations = {
         why_gdpr_text: "Vos données sont traitées en toute sécurité, conformément aux réglementations européennes.",
         why_worldwide: "Couverture Mondiale",
         why_worldwide_text: "Basés en France, actifs en Europe et en pleine expansion mondiale.",
+        gdpr_consent: "J'accepte les conditions générales et je consens au traitement de mes données.",
 
         // COMMITMENTS PAGE
         commitments_label: "Nos Engagements",

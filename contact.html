@@ -15,7 +15,16 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
-<body>
+<body class="inner-page-body">
+    <!-- PREMIUM BACKGROUND -->
+    <div class="premium-bg-container">
+        <div class="premium-bg-grid"></div>
+        <div class="premium-bg-grain"></div>
+        <div class="bg-blob bg-blob-1"></div>
+        <div class="bg-blob bg-blob-2"></div>
+        <div class="bg-blob bg-blob-3"></div>
+        <div class="bg-blob bg-blob-4"></div>
+    </div>
     <!-- HEADER -->
     <header class="header">
         <a href="index.html" class="logo-container">
@@ -97,6 +106,13 @@
                         <div class="form-group">
                             <label class="form-label" data-i18n="form_message">Your Message</label>
                             <textarea class="form-textarea" id="message" name="message" required></textarea>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 24px;">
+                            <label class="gdpr-checkbox">
+                                <input type="checkbox" id="gdprConsent" required>
+                                <span data-i18n="gdpr_consent">I agree to the Terms & Conditions and consent to the
+                                    processing of my data.</span>
+                            </label>
                         </div>
                         <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;" id="submitBtn"
                             data-i18n="form_submit">Send Message</button>
@@ -284,6 +300,22 @@
                 subject: document.getElementById('subject').value,
                 message: document.getElementById('message').value
             };
+
+            const userEmail = document.getElementById('userEmail').value.trim();
+            const userName = document.getElementById('userName').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const gdpr = document.getElementById('gdprConsent').checked;
+
+            if (!userName || !userEmail || !subject || !message || !gdpr) {
+                const msg = lang === 'fr'
+                    ? 'Veuillez remplir tous les champs obligatoires et accepter les conditions.'
+                    : 'Please fill in all required fields and accept the terms.';
+                showNotification('error', msg);
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+                return;
+            }
 
             try {
                 // 1. Send notification to owner
