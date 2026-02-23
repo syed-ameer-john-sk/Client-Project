@@ -146,7 +146,6 @@ const translations = {
         why_gdpr_text: "Your data is handled securely in full compliance with European regulations.",
         why_worldwide: "Worldwide Coverage",
         why_worldwide_text: "Based in France, operating across Europe and expanding globally.",
-        gdpr_consent: "I agree to the Terms & Conditions and consent to the processing of my data.",
 
         // COMMITMENTS PAGE
         commitments_label: "Our Commitments",
@@ -175,7 +174,50 @@ const translations = {
         footer_legal: "Legal",
         footer_privacy: "Privacy Policy",
         footer_terms: "Terms of Service",
-        brand_sub: "Expert Consulting Partner"
+        brand_sub: "Expert Consulting Partner",
+        footer_all_rights: "© 2026 Consultant sur Mesure – All Rights Reserved",
+        footer_contact: "Contact",
+
+        // MENTIONS LEGALES
+        legal_title: "Mentions Légales",
+        legal_company_label: "Company Name:",
+        legal_company_value: "Consultant sur Mesure",
+        legal_activity_label: "Business Activity:",
+        legal_activity_value: "Custom Consulting Company (CRO)",
+        legal_director_label: "Director:",
+        legal_director_value: "Korka Sall",
+        legal_address_label: "Registered Address:",
+        legal_address_value: "44 rue Jean Mermoz, 78600 Maison-Laffitte, France",
+        legal_siren_label: "SIREN:",
+        legal_siren_value: "881 640 825",
+        legal_email_label: "Contact Email:",
+        legal_hosting_title: "Hosting Provider",
+        legal_hosting_info: "This website is hosted by:<br>Vercel Inc.<br>340 S Lemon Ave #4133<br>Walnut, CA 91789<br>United States",
+        legal_hosting_website: "Website: https://vercel.com",
+        legal_ip_title: "Intellectual Property",
+        legal_ip_text: "All content on this website (texts, graphics, logos, structure) is the exclusive property of Consultant sur Mesure unless otherwise stated. Any reproduction, distribution, or use without prior written authorization is strictly prohibited.",
+
+        // PRIVACY POLICY
+        privacy_title: "Politique de Confidentialité",
+        privacy_intro: "Consultant sur Mesure is committed to protecting personal data in accordance with the General Data Protection Regulation (GDPR).",
+        privacy_1_title: "1. Data Collected",
+        privacy_1_list: "Through our website forms, we may collect:<ul><li>First and last name</li><li>Email address</li><li>Phone number</li><li>Professional information</li><li>CV and related documents (for candidate applications)</li></ul>",
+        privacy_2_title: "2. Purpose of Data Collection",
+        privacy_2_list: "Personal data is collected for the following purposes:<ul><li>Responding to contact inquiries</li><li>Managing recruitment processes</li><li>Evaluating candidate profiles</li><li>Managing potential business collaborations</li><li>Professional communication</li></ul>",
+        privacy_3_title: "3. Legal Basis",
+        privacy_3_text: "Data processing is based on the user’s consent provided when submitting a form on this website.",
+        privacy_4_title: "4. Data Storage and Security",
+        privacy_4_text: "Data submitted via forms is transmitted securely via email and stored only for processing purposes. Access to personal data is restricted to authorized personnel within Consultant sur Mesure. Reasonable technical and organizational measures are implemented to protect data from unauthorized access, loss, or misuse.",
+        privacy_5_title: "5. Data Retention Period",
+        privacy_5_text: "Contact inquiries: retained for up to 12 months. Candidate CVs: retained for a maximum of 24 months unless deletion is requested earlier. After this period, data is deleted or securely archived.",
+        privacy_6_title: "6. Data Sharing",
+        privacy_6_text: "Personal data is not sold, rented, or transferred to third parties without prior consent, except where required by law.",
+        privacy_7_title: "7. User Rights (GDPR)",
+        privacy_7_text: "In accordance with GDPR, users have the right to:<ul><li>Access their personal data</li><li>Request correction</li><li>Request deletion</li><li>Restrict processing</li><li>Object to processing</li></ul>To exercise these rights, please contact: <a href=\"mailto:consultantsurmesure@gmail.com\">consultantsurmesure@gmail.com</a>. A response will be provided within the legally required timeframe.",
+        privacy_8_title: "8. Cookies",
+        privacy_8_text: "This website does not use advertising or tracking cookies. Only essential technical cookies necessary for proper website functionality may be used.",
+
+        gdpr_consent: "I agree to the processing of my personal data in accordance with the <a href=\"privacy-policy.html\">Privacy Policy</a>."
     },
     fr: {
         nav_home: "Accueil", nav_companies: "Entreprises", nav_careers: "Carrières", nav_commitments: "Engagements", nav_about: "À Propos", nav_contact: "Contact",
@@ -322,7 +364,6 @@ const translations = {
         why_gdpr_text: "Vos données sont traitées en toute sécurité, conformément aux réglementations européennes.",
         why_worldwide: "Couverture Mondiale",
         why_worldwide_text: "Basés en France, actifs en Europe et en pleine expansion mondiale.",
-        gdpr_consent: "J'accepte les conditions générales et je consens au traitement de mes données.",
 
         // COMMITMENTS PAGE
         commitments_label: "Nos Engagements",
@@ -351,7 +392,50 @@ const translations = {
         footer_legal: "Juridique",
         footer_privacy: "Politique de confidentialité",
         footer_terms: "Conditions d'utilisation",
-        brand_sub: "Partenaire Conseil Expert"
+        brand_sub: "Partenaire Conseil Expert",
+        footer_all_rights: "© 2026 Consultant sur Mesure – Tous droits réservés",
+        footer_contact: "Contact",
+
+        // MENTIONS LEGALES
+        legal_title: "Mentions Légales",
+        legal_company_label: "Nom de l'entreprise :",
+        legal_company_value: "Consultant sur Mesure",
+        legal_activity_label: "Activité :",
+        legal_activity_value: "Société de conseil sur mesure (CRO)",
+        legal_director_label: "Directrice :",
+        legal_director_value: "Korka Sall",
+        legal_address_label: "Siège social :",
+        legal_address_value: "44 rue Jean Mermoz, 78600 Maison-Laffitte, France",
+        legal_siren_label: "SIREN :",
+        legal_siren_value: "881 640 825",
+        legal_email_label: "Email de contact :",
+        legal_hosting_title: "Hébergeur",
+        legal_hosting_info: "Ce site est hébergé par :<br>Vercel Inc.<br>340 S Lemon Ave #4133<br>Walnut, CA 91789<br>États-Unis",
+        legal_hosting_website: "Site web : https://vercel.com",
+        legal_ip_title: "Propriété Intellectuelle",
+        legal_ip_text: "Tout le contenu de ce site (textes, graphismes, logos, structure) est la propriété exclusive de Consultant sur Mesure, sauf mention contraire. Toute reproduction, distribution ou utilisation sans autorisation écrite préalable est strictement interdite.",
+
+        // PRIVACY POLICY
+        privacy_title: "Politique de Confidentialité",
+        privacy_intro: "Consultant sur Mesure s'engage à protéger les données personnelles conformément au Règlement Général sur la Protection des Données (RGPD).",
+        privacy_1_title: "1. Données Collectées",
+        privacy_1_list: "Via nos formulaires, nous pouvons collecter :<ul><li>Nom et prénom</li><li>Adresse email</li><li>Numéro de téléphone</li><li>Informations professionnelles</li><li>CV et documents connexes (pour les candidatures)</li></ul>",
+        privacy_2_title: "2. Finalité de la Collecte",
+        privacy_2_list: "Les données personnelles sont collectées pour :<ul><li>Répondre aux demandes de contact</li><li>Gérer les processus de recrutement</li><li>Évaluer les profils de candidats</li><li>Gérer les collaborations commerciales potentielles</li><li>Communication professionnelle</li></ul>",
+        privacy_3_title: "3. Base Légale",
+        privacy_3_text: "Le traitement des données est basé sur le consentement de l'utilisateur fourni lors de la soumission d'un formulaire sur ce site.",
+        privacy_4_title: "4. Stockage et Sécurité des Données",
+        privacy_4_text: "Les données soumises via les formulaires sont transmises par email de manière sécurisée et stockées uniquement à des fins de traitement. L'accès aux données est limité au personnel autorisé de Consultant sur Mesure. Des mesures techniques et organisationnelles raisonnables sont mises en œuvre pour protéger les données contre l'accès non autorisé, la perte ou l'utilisation abusive.",
+        privacy_5_title: "5. Durée de Conservation",
+        privacy_5_text: "Demandes de contact : conservées jusqu'à 12 mois. CV des candidats : conservés pendant un maximum de 24 mois sauf demande de suppression anticipée. Après cette période, les données sont supprimées ou archivées de manière sécurisée.",
+        privacy_6_title: "6. Partage des Données",
+        privacy_6_text: "Les données personnelles ne sont ni vendues, ni louées, ni transférées à des tiers sans consentement préalable, sauf disposition légale contraire.",
+        privacy_7_title: "7. Droits de l'Utilisateur (RGPD)",
+        privacy_7_text: "Conformément au RGPD, les utilisateurs ont le droit de :<ul><li>Accéder à leurs données</li><li>Demander une rectification</li><li>Demander la suppression</li><li>Limiter le traitement</li><li>S'opposer au traitement</li></ul>Pour exercer ces droits, veuillez contacter : <a href=\"mailto:consultantsurmesure@gmail.com\">consultantsurmesure@gmail.com</a>. Une réponse sera apportée dans les délais légaux.",
+        privacy_8_title: "8. Cookies",
+        privacy_8_text: "Ce site n'utilise pas de cookies publicitaires ou de suivi. Seuls des cookies techniques essentiels au bon fonctionnement du site peuvent être utilisés.",
+
+        gdpr_consent: "J'accepte le traitement de mes données personnelles conformément à la <a href=\"privacy-policy.html\">Politique de confidentialité</a>."
     }
 };
 

@@ -3837,3 +3837,111 @@ body::before {
 .inner-page-body {
     background: transparent !important;
 }
+/* ============================================
+   LEGAL PAGES & UPDATED FOOTER
+   ============================================ */
+
+.legal-container {
+    max-width: 900px;
+    margin: 100px auto 60px;
+    padding: 0 20px;
+}
+
+.legal-content {
+    background: var(--white);
+    border: 1px solid rgba(15, 118, 110, 0.1);
+    border-radius: 20px;
+    padding: 60px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.legal-section {
+    margin-bottom: 40px;
+}
+
+.legal-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+    color: var(--primary);
+}
+
+.legal-item {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.legal-label {
+    font-weight: 700;
+    color: var(--dark);
+    margin-right: 8px;
+}
+
+.legal-list {
+    list-style: disc;
+    margin-left: 24px;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.legal-list li {
+    margin-bottom: 12px;
+    color: var(--gray-text);
+}
+
+.legal-content p {
+    margin-bottom: 16px;
+    color: var(--gray-text);
+    line-height: 1.8;
+}
+
+.legal-content a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.legal-content a:hover {
+    text-decoration: underline;
+}
+
+/* Updated Footer Layout Support */
+.footer-bottom {
+    flex-direction: column !important;
+    gap: 16px !important;
+    padding-top: 32px !important;
+}
+
+.footer-legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.footer-legal-links a {
+    color: var(--gray-text);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.footer-legal-links a:hover {
+    color: var(--primary);
+}
+
+.footer-legal-links span {
+    color: rgba(15, 118, 110, 0.2);
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 40px 24px;
+    }
+    
+    .legal-container {
+        margin-top: 80px;
+    }
+}
