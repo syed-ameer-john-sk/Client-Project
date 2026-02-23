@@ -1738,8 +1738,9 @@ body::before {
 
 /* TEAM GRID */
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 32px;
     max-width: 900px;
     margin: 0 auto;
@@ -3837,6 +3838,7 @@ body::before {
 .inner-page-body {
     background: transparent !important;
 }
+
 /* ============================================
    LEGAL PAGES & UPDATED FOOTER
    ============================================ */
@@ -3940,7 +3942,7 @@ body::before {
     .legal-content {
         padding: 40px 24px;
     }
-    
+
     .legal-container {
         margin-top: 80px;
     }
