@@ -18,17 +18,25 @@
             <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
-                    <li><a href="reservation.html" class="nav-link active">Reservation</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+                    <li><a href="menu.html" class="nav-link" data-i18n="nav_menu">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link" data-i18n="nav_locations">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link active" data-i18n="nav_reservation">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="nav-right">
-                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <div class="lang-switcher">
+                    <select class="lang-select" aria-label="Select Language">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="nl">🇳🇱 NL</option>
+                        <option value="es">🇪🇸 ES</option>
+                    </select>
+                </div>
+                <a href="reservation.html" class="btn btn-primary btn-sm" data-i18n="btn_book">Book Table</a>
                 <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
             </div>
         </div>
@@ -36,13 +44,21 @@
 
     <!-- MOBILE NAVIGATION -->
     <nav class="mobile-nav" id="mobileNavDrawer">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="about.html" class="mobile-link">About</a>
-        <a href="menu.html" class="mobile-link">Menu</a>
-        <a href="gallery.html" class="mobile-link">Gallery</a>
-        <a href="locations.html" class="mobile-link">Our Locations</a>
-        <a href="reservation.html" class="mobile-link active">Reservation</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <div style="padding: 1rem 1.5rem 0.5rem; display: flex; justify-content: flex-start;">
+            <select class="lang-select" aria-label="Select Language">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+            </select>
+        </div>
+        <a href="index.html" class="mobile-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="mobile-link" data-i18n="nav_about">About</a>
+        <a href="menu.html" class="mobile-link" data-i18n="nav_menu">Menu</a>
+        <a href="gallery.html" class="mobile-link" data-i18n="nav_gallery">Gallery</a>
+        <a href="locations.html" class="mobile-link" data-i18n="nav_locations">Our Locations</a>
+        <a href="reservation.html" class="mobile-link active" data-i18n="nav_reservation">Reservation</a>
+        <a href="contact.html" class="mobile-link" data-i18n="nav_contact">Contact</a>
     </nav>
 
     <!-- HERO HEADER -->

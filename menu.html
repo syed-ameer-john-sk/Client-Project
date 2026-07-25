@@ -18,41 +18,57 @@
             <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
             <nav>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
-                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
-                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav_about">About</a></li>
+                    <li><a href="menu.html" class="nav-link active" data-i18n="nav_menu">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link" data-i18n="nav_gallery">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link" data-i18n="nav_locations">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link" data-i18n="nav_reservation">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact</a></li>
                 </ul>
             </nav>
             <div class="nav-right">
-                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
-                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+                <div class="lang-switcher">
+                    <select class="lang-select" aria-label="Select Language">
+                        <option value="fr">🇫🇷 FR</option>
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="nl">🇳🇱 NL</option>
+                        <option value="es">🇪🇸 ES</option>
+                    </select>
+                </div>
+                <a href="reservation.html" class="btn btn-primary btn-sm" data-i18n="btn_book">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
             </div>
         </div>
     </header>
 
     <!-- MOBILE NAVIGATION -->
     <nav class="mobile-nav" id="mobileNavDrawer">
-        <a href="index.html" class="mobile-link">Home</a>
-        <a href="about.html" class="mobile-link">About</a>
-        <a href="menu.html" class="mobile-link active">Menu</a>
-        <a href="gallery.html" class="mobile-link">Gallery</a>
-        <a href="locations.html" class="mobile-link">Our Locations</a>
-        <a href="reservation.html" class="mobile-link">Reservation</a>
-        <a href="contact.html" class="mobile-link">Contact</a>
+        <div style="padding: 1rem 1.5rem 0.5rem; display: flex; justify-content: flex-start;">
+            <select class="lang-select" aria-label="Select Language">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="nl">🇳🇱 NL</option>
+                <option value="es">🇪🇸 ES</option>
+            </select>
+        </div>
+        <a href="index.html" class="mobile-link" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="mobile-link" data-i18n="nav_about">About</a>
+        <a href="menu.html" class="mobile-link active" data-i18n="nav_menu">Menu</a>
+        <a href="gallery.html" class="mobile-link" data-i18n="nav_gallery">Gallery</a>
+        <a href="locations.html" class="mobile-link" data-i18n="nav_locations">Our Locations</a>
+        <a href="reservation.html" class="mobile-link" data-i18n="nav_reservation">Reservation</a>
+        <a href="contact.html" class="mobile-link" data-i18n="nav_contact">Contact</a>
     </nav>
 
     <!-- MENU HEADER HERO -->
     <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/hero_curry.png') center/cover;" class="text-center">
         <div class="container">
-            <span class="section-tag">Spécialité Indienne et Sri Lankaise</span>
+            <span class="section-tag" data-i18n="hero_tagline">Spécialité Indienne et Sri Lankaise</span>
             <h1 class="section-title">La Carte Officielle</h1>
             <p class="section-subtitle mx-auto">51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. Plats préparés avec épices fraîchement moulues.</p>
             
-            <div style="background:rgba(212,122,0,0.15); border:1px solid var(--color-primary); padding:0.8rem 1.5rem; border-radius:var(--radius-pill); display:inline-block; margin-top:1.5rem; font-size:0.9rem; color:var(--text-gold);">
+            <div style="background:rgba(212,122,0,0.15); border:1px solid var(--color-primary); padding:0.8rem 1.5rem; border-radius:var(--radius-pill); display:inline-block; margin-top:1.5rem; font-size:0.9rem; color:var(--text-gold);" data-i18n="spice_note" data-i18n-html="true">
                 🌶️ <em>"Chez nous, les plats sont doux pour plaire à tous. Si vous aimez quand ça chauffe, demandez-les relevés !"</em>
             </div>
         </div>
@@ -63,14 +79,14 @@
         <div class="container">
             <!-- CATEGORY FILTER TABS -->
             <div class="menu-tabs">
-                <button class="tab-btn active" data-filter="all">Tous les Plats</button>
-                <button class="tab-btn" data-filter="entrees">Entrées</button>
-                <button class="tab-btn" data-filter="specialites">Spécialités Maison</button>
-                <button class="tab-btn" data-filter="curries">Currys & Kormas</button>
-                <button class="tab-btn" data-filter="vegetariens">Currys Végétariens</button>
-                <button class="tab-btn" data-filter="biriyani">Biriyani & Grillades</button>
-                <button class="tab-btn" data-filter="naans">Naans & Accompagnements</button>
-                <button class="tab-btn" data-filter="desserts">Desserts & Enfants</button>
+                <button class="tab-btn active" data-filter="all" data-i18n="filter_all">Tous les Plats</button>
+                <button class="tab-btn" data-filter="entrees" data-i18n="filter_entrees">Entrées</button>
+                <button class="tab-btn" data-filter="specialites" data-i18n="filter_specialites">Spécialités Maison</button>
+                <button class="tab-btn" data-filter="curries" data-i18n="filter_curries">Currys & Kormas</button>
+                <button class="tab-btn" data-filter="vegetariens" data-i18n="filter_vegetariens">Currys Végétariens</button>
+                <button class="tab-btn" data-filter="biriyani" data-i18n="filter_biriyani">Biriyani & Grillades</button>
+                <button class="tab-btn" data-filter="naans" data-i18n="filter_naans">Naans & Accompagnements</button>
+                <button class="tab-btn" data-filter="desserts" data-i18n="filter_desserts">Desserts & Enfants</button>
             </div>
 
             <!-- MENU ITEMS LIST -->
