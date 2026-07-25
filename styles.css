@@ -414,71 +414,77 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menu-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .menu-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all var(--transition-fast);
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  transition: background var(--transition-fast);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  padding: 1.2rem 1rem;
+}
+
+.menu-card:last-child {
+  border-bottom: none;
 }
 
 .menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-  border-color: rgba(212, 122, 0, 0.3);
+  transform: none;
+  box-shadow: none;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
 }
 
+/* Images are removed — hide in case any remain */
 .menu-card-img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
+  display: none;
 }
 
 .menu-card-body {
-  padding: 1.6rem;
+  padding: 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-/* Structured Header Grid: Title Left, Price Badge Right */
+/* List row: Title Left, Price Right */
 .menu-card-header {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 0.8rem;
-  align-items: start;
-  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
 }
 
 .menu-item-title {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   font-family: var(--font-display);
+  font-weight: 600;
   line-height: 1.3;
   margin: 0;
   color: var(--text-main);
 }
 
 .menu-item-price {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-primary);
-  background: rgba(212, 122, 0, 0.12);
-  padding: 0.3rem 0.8rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid rgba(212, 122, 0, 0.35);
   white-space: nowrap;
   text-align: right;
-  display: inline-block;
-  align-self: start;
+  background: none;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  flex-shrink: 0;
 }
 
 .menu-item-desc {
@@ -984,6 +990,6 @@ h1, h2, h3, h4, h5, h6 {
   .timeline-dot { left: 12px !important; }
   .footer-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 2.2rem; }
-  .menu-card-header { grid-template-columns: 1fr; gap: 0.4rem; }
-  .menu-item-price { align-self: start; text-align: left; }
+  .menu-card-header { flex-direction: row; gap: 0.5rem; }
+  .menu-item-price { text-align: right; }
 }
