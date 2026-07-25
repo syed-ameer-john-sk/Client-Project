@@ -1,223 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Consultant sur Mesure</title>
-    <meta name="description"
-        content="Learn about Consultant sur Mesure - expert partners in clinical research connecting life sciences companies with qualified professionals.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>About Us & Brand Story | Maison du Curry Toulouse</title>
+    <meta name="description" content="Discover the history of Maison du Curry: founded in 2014, expanding through Marché Victor Hugo, Halles de la Cartoucherie, and Airbus in Toulouse.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+<body>
 
-<body class="inner-page-body">
-    <!-- PREMIUM BACKGROUND -->
-    <div class="premium-bg-container">
-        <div class="premium-bg-grid"></div>
-        <div class="premium-bg-grain"></div>
-        <div class="bg-blob bg-blob-1"></div>
-        <div class="bg-blob bg-blob-2"></div>
-        <div class="bg-blob bg-blob-3"></div>
-        <div class="bg-blob bg-blob-4"></div>
-    </div>
-    <!-- HEADER -->
+    <!-- STICKY HEADER -->
     <header class="header">
-        <a href="index.html" class="logo-container">
-            <div class="atom-wrapper">
-                <div class="atom-ring ring-1"></div>
-                <div class="atom-ring ring-2"></div>
-                <div class="atom-ring ring-3"></div>
-                <div class="atom-nucleus"></div>
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
             </div>
-            <div class="logo-text-col">
-                <span class="brand-main">Consultant sur Mesure</span>
-                <span class="brand-sub" data-i18n="brand_sub">Expert Consulting Partner</span>
-            </div>
-        </a>
-        <nav class="nav">
-            <a href="index.html" data-i18n="nav_home">Home</a>
-            <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-            <a href="careers.html" data-i18n="nav_careers">Careers</a>
-            <a href="commitments.html" data-i18n="nav_commitments">Commitments</a>
-            <a href="about.html" class="active" data-i18n="nav_about">About</a>
-            <a href="contact.html" data-i18n="nav_contact">Contact</a>
-        </nav>
-        <div class="header-right">
-            <button class="lang-btn" id="langBtn">EN</button>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html" data-i18n="nav_home">Home</a>
-        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-        <a href="careers.html" data-i18n="nav_careers">Careers</a>
-        <a href="commitments.html" data-i18n="nav_commitments">Commitments</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link active">About</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="locations.html" class="mobile-link">Our Locations</a>
+        <a href="reservation.html" class="mobile-link">Reservation</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
     </nav>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-label" data-i18n="about_label">About Us</div>
-            <h1 class="page-title">
-                <span data-i18n="about_title">Expert Partners in Clinical Research</span>
-            </h1>
-            <p class="page-subtitle" data-i18n="about_subtitle">Connecting life sciences companies with qualified
-                professionals since our founding.</p>
+    <!-- HERO HEADER -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/victor_hugo_stall.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Spécialités Indiennes et Sri-Lankaises</span>
+            <h1 class="section-title">The Story of Maison du Curry</h1>
+            <p class="section-subtitle mx-auto">From a passion for authentic spice blends to a landmark culinary brand in Toulouse.</p>
         </div>
     </section>
 
-    <!-- STORY -->
-    <section class="section section-light">
+    <!-- MAIN STORY SECTION -->
+    <section class="about-section">
         <div class="container">
-            <div class="section-header animate-in">
-                <div class="section-label" data-i18n="story_label">Our Story</div>
-                <h2 class="section-title" data-i18n="story_title">How We Started</h2>
-            </div>
-            <div class="feature-card animate-in">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                    </svg>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; margin-bottom:5rem;">
+                <div class="animate-on-scroll">
+                    <span class="section-tag">Passion & Integrity</span>
+                    <h2 class="section-title">Authentic Indian & Sri-Lankan Gastronomy</h2>
+                    <p style="color:var(--text-muted); margin-bottom:1.2rem;">At Maison du Curry, food is a celebration of heritage, family traditions, and warm hospitality. Every gravy is slow-cooked from scratch without artificial additives or thickeners, using hand-selected cardamom, cloves, turmeric, and Kashmiri chillies.</p>
+                    <p style="color:var(--text-muted);">Our team delivers daily traiteur catering services, fresh thali platters, samosas, and roasted tandoori delicacies across Toulouse.</p>
                 </div>
-                <p class="ceo-bio" data-i18n="story_text">Consultant sur Mesure was founded with a clear mission: to
-                    revolutionize how life sciences companies find and work with clinical research professionals. Our
-                    founders, with decades of experience in pharmaceutical and biotech industries, saw a gap between
-                    what companies needed and what traditional staffing agencies offered. We built a boutique consulting
-                    firm focused on quality over quantity, expertise over generics, and long-term partnerships over
-                    transactional placements.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MISSION -->
-    <section class="section section-white">
-        <div class="container">
-            <div class="section-header animate-in">
-                <div class="section-label" data-i18n="mission_label">Our Mission</div>
-                <h2 class="section-title" data-i18n="mission_title">What Drives Us</h2>
-            </div>
-            <div class="feature-card animate-in">
-                <div class="feature-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10" />
-                        <circle cx="12" cy="12" r="6" opacity="0.5" />
-                        <circle cx="12" cy="12" r="2" />
-                    </svg>
+                <div class="animate-on-scroll">
+                    <img src="images/traiteur_catering_buffet.png" alt="Maison du Curry Traiteur Catering Prep" style="border-radius:var(--radius-md); box-shadow:var(--shadow-md);">
                 </div>
-                <p class="ceo-bio" data-i18n="mission_text">To connect pharmaceutical, biomedical, and cosmetic
-                    companies with the most qualified clinical research experts, ensuring project success through
-                    personalized matching and ongoing support.</p>
             </div>
-        </div>
-    </section>
 
-    <hr class="section-divider">
-
-    <!-- CEO -->
-    <section class="section section-light">
-        <div class="container">
-            <div class="section-header animate-in">
-                <div class="section-label" data-i18n="ceo_about_label">Leadership</div>
-                <h2 class="section-title" data-i18n="ceo_about_title">About Korka SALL</h2>
+            <!-- VISUAL BRAND TIMELINE (MDC-006) -->
+            <div class="text-center animate-on-scroll">
+                <span class="section-tag">Milestones</span>
+                <h2 class="section-title">Our Growth Timeline</h2>
+                <p class="section-subtitle mx-auto">Key chapters in our decade-long journey across Toulouse.</p>
             </div>
-            <div class="ceo-profile animate-in">
-                <div class="ceo-image-wrapper">
-                    <div class="ceo-image">
-                        <img src="images/korka-sall.png" alt="Korka SALL"
-                            onerror="this.src='https://via.placeholder.com/320x380?text=Korka+SALL';">
-                    </div>
-                    <a href="https://linkedin.com/in/korka-sall-kebe" target="_blank" rel="noopener"
-                        class="ceo-linkedin-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect width="4" height="12" x="2" y="9" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                        LinkedIn
-                    </a>
-                </div>
-                <div class="ceo-info">
-                    <h3 data-i18n="ceo_name">Korka SALL</h3>
-                    <p class="ceo-role" data-i18n="ceo_about_subtitle">CEO & Founder – Consultant sur Mesure</p>
-                    <div class="ceo-bio">
-                        <p style="margin-bottom: 24px;" data-i18n="ceo_bio">With over 10 years of experience in the
-                            pharmaceutical industry, biotechs, and CROs, Korka SALL has built a career dedicated to
-                            clinical excellence and operational innovation.</p>
 
-                        <h4 style="margin-bottom: 12px; color: var(--primary);" data-i18n="ceo_exp_title">Core Expertise
-                        </h4>
-                        <div style="white-space: pre-line; margin-bottom: 24px;" data-i18n="ceo_exp_text">
-                            • Clinical Research Associate (CRA)
-                            • Clinical Project Manager
-                            • Lead Auditor
-                            • Clinical Operations Strategy
-                            • Digital Transformation Specialist
-                        </div>
-
-                        <div class="ceo-quote" data-i18n="ceo_mission">
-                            My mission is based on three pillars: Commitment, Quality, and Transparency. We reveal and
-                            secure the human capital necessary for the success of your international clinical trials.
-                        </div>
+            <div class="timeline">
+                <!-- Milestone 1: 2014 -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2014</div>
+                        <h3 style="font-size:1.2rem; margin-bottom:0.4rem;">Foundation of Maison du Curry</h3>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Launched in Toulouse with a vision to offer authentic, high-quality Indian & Sri-Lankan gastronomy.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- TEAM -->
-    <section class="section section-white">
-        <div class="container">
-            <div class="section-header animate-in">
-                <div class="section-label">Our Team</div>
-                <h2 class="section-title">Meet The Team</h2>
-            </div>
-            <div class="team-grid animate-in">
-                <!-- Rohith Thinakaran -->
-                <div class="team-card">
-                    <div class="team-avatar">
-                        <img src="images/rohith.jpg" alt="Rohith Thinakaran"
-                            onerror="this.src='https://via.placeholder.com/140x140?text=Rohith';">
+                <!-- Milestone 2: Marché Victor Hugo -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">Marché Victor Hugo</div>
+                        <h3 style="font-size:1.2rem; margin-bottom:0.4rem;">Covered Market Traiteur Counter</h3>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Opened our landmark traiteur stall inside Toulouse's historic covered market Place Victor Hugo.</p>
                     </div>
-                    <h3>Rohith Thinakaran</h3>
-                    <p class="team-role">Business Development</p>
-                    <a href="https://linkedin.com/in/rohith19" target="_blank" rel="noopener" class="ceo-linkedin-btn"
-                        style="position: static; transform: none; display: inline-flex; margin-top: 10px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect width="4" height="12" x="2" y="9" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                        LinkedIn
-                    </a>
                 </div>
 
-            </div>
-        </div>
-    </section>
+                <!-- Milestone 3: Halles de la Cartoucherie -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">Halles de la Cartoucherie</div>
+                        <h3 style="font-size:1.2rem; margin-bottom:0.4rem;">Street Food Expansion</h3>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Expanded into Les Halles de la Cartoucherie, serving fast gourmet Indian street food and fresh naan.</p>
+                    </div>
+                </div>
 
-    <hr class="section-divider">
-
-    <!-- CTA -->
-    <section class="section section-dark">
-        <div class="container">
-            <div class="cta-content animate-in">
-                <div class="section-label" data-i18n="cta_about_label">Get in Touch</div>
-                <h2 class="section-title" data-i18n="cta_about_title">Let's Discuss Your Project</h2>
-                <p class="cta-text" data-i18n="cta_about_text">Whether you need expert consultants or want to join our
-                    network, we'd love to hear from you.</p>
-                <a href="contact.html" class="btn btn-primary" data-i18n="btn_contact_us">Contact Us →</a>
+                <!-- Milestone 4: Maison du Curry Restaurant & Airbus -->
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">Present & Future</div>
+                        <h3 style="font-size:1.2rem; margin-bottom:0.4rem;">Corporate Dining & Airbus Branch</h3>
+                        <p style="font-size:0.9rem; color:var(--text-muted);">Established on-site corporate dining service at Airbus campus and expanded restaurant operations.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -226,57 +124,37 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <div class="footer-brand-name">Consultant sur Mesure</div>
-                    <p class="footer-brand-text" data-i18n="footer_text">Expert Consulting Partner for Clinical
-                        Research.</p>
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>Authentic Indian gastronomy in Toulouse since 2014.</p>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
+                    <h4 class="footer-col-title">Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                        <li><a href="companies.html" data-i18n="nav_companies">For Companies</a></li>
-                        <li><a href="careers.html" data-i18n="nav_careers">Careers</a></li>
-                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="locations.html">Locations</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
+                    <h4 class="footer-col-title">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a></li>
-                        <li><a href="tel:+33744114917">07 44 11 49 17</a></li>
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title">Location</h4>
-                    <p class="footer-brand-text">Maison-Laffitte, France</p>
-                    <div
-                        style="margin-top: 12px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="images/cap-mermoz.jpg.png" alt="CAP Mermoz - 44 rue Jean Mermoz, Maisons-Laffitte"
-                            style="width: 100%; height: auto; display: block;">
-                    </div>
-                    <div
-                        style="margin-top: 12px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d275.42675412460557!2d2.14256990109745!3d48.947475293128086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e661f8ebeaffeb%3A0x173d1523d4a1648e!2sCap%20Mermoz!5e0!3m2!1sen!2sus!4v1771867025004!5m2!1sen!2sus"
-                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_all_rights">&copy; 2026 Consultant sur Mesure. All rights reserved.</p>
-                <div class="footer-legal-links">
-                    <a href="mentions-legales.html" data-i18n="legal_title">Mentions légales</a>
-                    <span>|</span>
-                    <a href="privacy-policy.html" data-i18n="footer_privacy">Politique de confidentialité</a>
-                    <span>|</span>
-                    <a href="contact.html" data-i18n="footer_contact">Contact</a>
-                </div>
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script src="shared.js"></script>
 </body>
-
 </html>

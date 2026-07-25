@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Reservations & Inquiries | Maison du Curry Toulouse</title>
+    <meta name="description" content="Book a table or request catering services at Maison du Curry Toulouse. Call 0660025968 or send a WhatsApp message.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link active">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="locations.html" class="mobile-link">Our Locations</a>
+        <a href="reservation.html" class="mobile-link active">Reservation</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/hero_curry.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Direct Bookings</span>
+            <h1 class="section-title">Reserve Your Table</h1>
+            <p class="section-subtitle mx-auto">Book your dining experience or order private catering with instant confirmation.</p>
+        </div>
+    </section>
+
+    <!-- RESERVATION CARD SECTION (MDC-008) -->
+    <section class="reservation-section">
+        <div class="container">
+            <div class="reservation-card animate-on-scroll">
+                <div>
+                    <span class="section-tag">Contact Shortcuts</span>
+                    <h2 class="section-title" style="margin-bottom:1rem;">Get in Touch Directly</h2>
+                    <p style="color:var(--text-muted); margin-bottom:1.5rem;">Reach out via phone, email, or instant WhatsApp messaging for quick responses and group bookings.</p>
+                    
+                    <ul class="contact-info-list">
+                        <li class="contact-info-item">
+                            <span>📞</span> <strong>Phone:</strong> <a href="tel:0660025968" style="color:var(--color-primary);">06 60 02 59 68</a>
+                        </li>
+                        <li class="contact-info-item">
+                            <span>✉️</span> <strong>Email:</strong> <a href="mailto:Kelan.anne31@gmail.com" style="color:var(--color-primary);">Kelan.anne31@gmail.com</a>
+                        </li>
+                    </ul>
+
+                    <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+                        <a href="https://wa.me/33660025968" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 WhatsApp Booking</a>
+                        <a href="tel:0660025968" class="btn btn-outline">Call Direct</a>
+                    </div>
+
+                    <div class="hours-display-box" style="margin-top:2rem;">
+                        <h4 style="margin-bottom:0.6rem; color:var(--text-gold);">Opening Hours (Synchronized)</h4>
+                        <div class="js-opening-hours"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <form class="js-reservation-form" style="background:rgba(0,0,0,0.4); padding:2rem; border-radius:var(--radius-md); border:1px solid rgba(255,255,255,0.08);">
+                        <h3 style="font-size:1.4rem; margin-bottom:1.2rem;">Online Table Reservation</h3>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="rName">Full Name *</label>
+                            <input type="text" id="rName" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="rEmail">Email Address *</label>
+                            <input type="email" id="rEmail" class="form-control" placeholder="name@domain.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="rPhone">Phone Number *</label>
+                            <input type="tel" id="rPhone" class="form-control" placeholder="06 XX XX XX XX" required>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                            <div class="form-group">
+                                <label class="form-label" for="rGuests">Number of Guests *</label>
+                                <select id="rGuests" class="form-control" required>
+                                    <option value="1">1 Person</option>
+                                    <option value="2" selected>2 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="6">6 Guests</option>
+                                    <option value="8">8+ Guests (Group)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="rDate">Reservation Date *</label>
+                                <input type="date" id="rDate" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="rNotes">Special Requests (Dietary, Seating)</label>
+                            <textarea id="rNotes" class="form-control" rows="3" placeholder="e.g. Vegetarian preference, anniversary table..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:1rem;">Confirm Reservation Request →</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>Authentic Indian gastronomy in Toulouse since 2014.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

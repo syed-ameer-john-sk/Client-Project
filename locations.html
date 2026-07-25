@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Locations | Maison du Curry Toulouse</title>
+    <meta name="description" content="Visit Maison du Curry across Toulouse: 51 Rue du Taur flagship restaurant, Marché Victor Hugo traiteur market stall, Halles de la Cartoucherie street food, and Airbus campus.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link active">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="locations.html" class="mobile-link active">Our Locations</a>
+        <a href="reservation.html" class="mobile-link">Reservation</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/victor_hugo_stall.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Spécialités Indiennes et Sri-Lankaises</span>
+            <h1 class="section-title">Our Restaurant & Traiteur Locations</h1>
+            <p class="section-subtitle mx-auto">Discover Maison du Curry across Toulouse: Rue du Taur, Marché Victor Hugo, Halles de la Cartoucherie & Airbus.</p>
+        </div>
+    </section>
+
+    <!-- LOCATIONS CARDS GRID SECTION (MDC-002) -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="locations-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                
+                <!-- Location 0: Flagship Restaurant Rue du Taur -->
+                <div class="location-card animate-on-scroll">
+                    <img src="images/hero_curry.png" alt="Maison du Curry Restaurant Rue du Taur" class="location-card-img">
+                    <div class="location-card-body">
+                        <div class="location-type">Restaurant Principal & Dine-In</div>
+                        <h2 class="location-name">Rue du Taur Restaurant</h2>
+                        <p class="location-address">📍 51 Rue du Taur, 31000 Toulouse, France</p>
+                        <p class="location-desc">Our primary restaurant dining room located in central Toulouse. Offering full menu service, Burrata Butter Chicken, Thalis, tandoori specialties, and fine desserts.</p>
+                        
+                        <div style="background:rgba(255,255,255,0.04); padding:1rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; border-left:3px solid var(--color-primary);">
+                            <h4 style="font-size:0.9rem; color:var(--text-gold); margin-bottom:0.4rem;">Operating Hours</h4>
+                            <div class="js-opening-hours" style="font-size:0.85rem;"></div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=51+Rue+du+Taur+31000+Toulouse+France" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">Open in Google Maps ↗</a>
+                    </div>
+                </div>
+
+                <!-- Location 1: Marché Victor Hugo -->
+                <div class="location-card animate-on-scroll">
+                    <img src="images/victor_hugo_stall.png" alt="Maison du Curry Stall at Marché Victor Hugo" class="location-card-img">
+                    <div class="location-card-body">
+                        <div class="location-type">Market Stall & Traiteur Service</div>
+                        <h2 class="location-name">Marché Victor Hugo</h2>
+                        <p class="location-address">📍 Place Victor Hugo, Loge 220.221.1/2, 31000 Toulouse</p>
+                        <p class="location-desc">Our landmark traiteur stall inside Toulouse's historic covered market. Offering freshly prepared daily curries, hot samosas, basmati rice, and authentic Sri-Lankan & Indian specialties.</p>
+                        
+                        <div style="background:rgba(255,255,255,0.04); padding:1rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; border-left:3px solid var(--color-primary);">
+                            <h4 style="font-size:0.9rem; color:var(--text-gold); margin-bottom:0.4rem;">Operating Hours</h4>
+                            <div class="js-opening-hours" style="font-size:0.85rem;"></div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Place+Victor+Hugo+31000+Toulouse+France" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">Open in Google Maps ↗</a>
+                    </div>
+                </div>
+
+                <!-- Location 2: Halles de la Cartoucherie -->
+                <div class="location-card animate-on-scroll">
+                    <img src="images/cartoucherie_facade.png" alt="Les Halles de la Cartoucherie Toulouse" class="location-card-img">
+                    <div class="location-card-body">
+                        <div class="location-type">Street Food Indienne</div>
+                        <h2 class="location-name">Halles de la Cartoucherie</h2>
+                        <p class="location-address">📍 10 Place de la Charte des Libertés Communales, 31300 Toulouse</p>
+                        <p class="location-desc">Dynamic street food kitchen inside Les Halles de la Cartoucherie food court. Specializing in fast gourmet thalis, tandoori rolls, and freshly baked naan.</p>
+                        
+                        <div style="background:rgba(255,255,255,0.04); padding:1rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; border-left:3px solid var(--color-primary);">
+                            <h4 style="font-size:0.9rem; color:var(--text-gold); margin-bottom:0.4rem;">Operating Hours</h4>
+                            <div class="js-opening-hours" style="font-size:0.85rem;"></div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=10+Place+de+la+Charte+des+Libertes+Communales+31300+Toulouse" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">Open in Google Maps ↗</a>
+                    </div>
+                </div>
+
+                <!-- Location 3: Airbus Branch -->
+                <div class="location-card animate-on-scroll">
+                    <img src="images/airbus_branch.png" alt="Airbus Campus Branch" class="location-card-img">
+                    <div class="location-card-body">
+                        <div class="location-type">Restauration Collective</div>
+                        <h2 class="location-name">Airbus Campus Branch</h2>
+                        <p class="location-address">📍 Airbus Campus Premises, Toulouse</p>
+                        <p class="location-desc">Exclusive corporate dining partnership providing healthy, balanced, authentic Indian lunch bowls and catering services directly on site for Airbus employees.</p>
+                        
+                        <div style="background:rgba(255,255,255,0.04); padding:1rem; border-radius:var(--radius-sm); margin-bottom:1.5rem; border-left:3px solid var(--color-primary);">
+                            <h4 style="font-size:0.9rem; color:var(--text-gold); margin-bottom:0.4rem;">Operating Hours</h4>
+                            <div class="js-opening-hours" style="font-size:0.85rem;"></div>
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Airbus+Toulouse+France" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width:100%;">View Directions ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. Spécialités indiennes et sri-lankaises depuis 2014.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>📍 51 Rue du Taur, 31000 Toulouse</li>
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

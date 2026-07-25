@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery & Atmosphere | Maison du Curry Toulouse</title>
+    <meta name="description" content="Browse authentic photos of Maison du Curry: market stall at Marché Victor Hugo, Halles de la Cartoucherie, traiteur catering buffets, samosas, chaat, and desserts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="gallery.html" class="mobile-link active">Gallery</a>
+        <a href="locations.html" class="mobile-link">Our Locations</a>
+        <a href="reservation.html" class="mobile-link">Reservation</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </nav>
+
+    <!-- HERO HEADER -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/victor_hugo_stall.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Authentic Photography</span>
+            <h1 class="section-title">Photo Gallery & Atmosphere</h1>
+            <p class="section-subtitle mx-auto">Explore our dishes, market counters, team, catering buffets, and vibrant atmosphere in Toulouse.</p>
+        </div>
+    </section>
+
+    <!-- GALLERY GRID SECTION (MDC-007 - ALL NEW & AUTHENTIC PHOTOS) -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Gallery 1: New Samosa Tray -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/samosa_tray.jpg" alt="Artisanal Crisp Samosas Served Fresh">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 2: New Gourmet Pani Puri -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/pani_puri.jpg" alt="Gourmet Sev Puri / Pani Puri with Edible Flowers">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 3: New Fresh Tandoori Naan -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/fresh_naan.jpg" alt="Fresh Baked Clay Oven Naan Flatbread">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 4: New Plated Kulfi Dessert -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/dessert_plated.jpg" alt="Plated Pistachio Kulfi Dessert with Currants">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 5: New Stall Team Photo -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/stall_team.jpg" alt="Maison du Curry Market Stall Team">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 6: Marché Victor Hugo Stall -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/victor_hugo_stall.png" alt="Maison du Curry Marché Victor Hugo Counter">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 7: Traiteur Catering Buffet -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/traiteur_catering_buffet.png" alt="Maison du Curry Catering Service">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+
+                <!-- Gallery 8: Les Halles de la Cartoucherie Facade -->
+                <div class="gallery-item animate-on-scroll">
+                    <img src="images/cartoucherie_facade.png" alt="Les Halles de la Cartoucherie Toulouse">
+                    <div class="gallery-overlay">
+                        <span style="color:#FFF; font-size:1.8rem;">🔍</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL POPUP (MDC-007) -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true">
+        <button class="lightbox-btn lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+        <button class="lightbox-btn lightbox-prev" id="lightboxPrev" aria-label="Previous Image">❮</button>
+        <img src="" alt="Enlarged view" class="lightbox-img" id="lightboxImg">
+        <button class="lightbox-btn lightbox-next" id="lightboxNext" aria-label="Next Image">❯</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>Authentic Indian gastronomy in Toulouse since 2014.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

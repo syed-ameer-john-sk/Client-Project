@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Carte & Menu Officiel | Maison du Curry Toulouse</title>
+    <meta name="description" content="Découvrez le menu officiel complet de Maison du Curry Toulouse (51 Rue du Taur & Marché Victor Hugo): Butter Chicken, Burrata Butter Chicken, Biryani, Thali, Naans au tandoori, et desserts.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="menu.html" class="nav-link active">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="menu.html" class="mobile-link active">Menu</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="locations.html" class="mobile-link">Our Locations</a>
+        <a href="reservation.html" class="mobile-link">Reservation</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+    </nav>
+
+    <!-- MENU HEADER HERO -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/hero_curry.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Spécialité Indienne et Sri Lankaise</span>
+            <h1 class="section-title">La Carte Officielle</h1>
+            <p class="section-subtitle mx-auto">51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. Plats préparés avec épices fraîchement moulues.</p>
+            
+            <div style="background:rgba(212,122,0,0.15); border:1px solid var(--color-primary); padding:0.8rem 1.5rem; border-radius:var(--radius-pill); display:inline-block; margin-top:1.5rem; font-size:0.9rem; color:var(--text-gold);">
+                🌶️ <em>"Chez nous, les plats sont doux pour plaire à tous. Si vous aimez quand ça chauffe, demandez-les relevés !"</em>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU CONTENT SECTION (MDC-001) -->
+    <section class="menu-section">
+        <div class="container">
+            <!-- CATEGORY FILTER TABS -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-filter="all">Tous les Plats</button>
+                <button class="tab-btn" data-filter="entrees">Entrées</button>
+                <button class="tab-btn" data-filter="specialites">Spécialités Maison</button>
+                <button class="tab-btn" data-filter="curries">Currys & Kormas</button>
+                <button class="tab-btn" data-filter="vegetariens">Currys Végétariens</button>
+                <button class="tab-btn" data-filter="biriyani">Biriyani & Grillades</button>
+                <button class="tab-btn" data-filter="naans">Naans & Accompagnements</button>
+                <button class="tab-btn" data-filter="desserts">Desserts & Enfants</button>
+            </div>
+
+            <!-- MENU ITEMS GRID -->
+            <div class="menu-grid">
+                
+                <!-- 1. ENTRÉES -->
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/samosa_tray.jpg" alt="Samosa de Légumes" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#4 Samosa de Légumes</h3>
+                            <div class="menu-item-price">6,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Beignets croustillants farcis aux légumes épicés, servis avec salade fraîche.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Végétarien</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/pani_puri.jpg" alt="Dahi Poori" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#7 Dahi Poori</h3>
+                            <div class="menu-item-price">7,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Coques croustillantes garnies de pommes de terre, pois chiches épicés, sauce tamarin et menthe, yaourt.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Spécialité Chaat</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/hero_curry.png" alt="Samosa Chaat" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#5 Samosa Chaat</h3>
+                            <div class="menu-item-price">8,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Samosas croustillants servis avec des pois chiches épicés, yaourt frais, chutneys maison et coriandre fraîche.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Populaire</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/tandoori.png" alt="Tempura de Gambas" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#6 Tempura de Gambas</h3>
+                            <div class="menu-item-price">11,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Gambas croustillantes enrobées d’une pâte légère aux épices indiennes, servies avec chutney maison.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Croustillant</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/hero_curry.png" alt="Purani Delhi Aloo Tikki" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#3 Purani Delhi Aloo Tikki</h3>
+                            <div class="menu-item-price">8,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Galette de pomme de terre farcie, pois chiches, chana dhaal, trio de sauces maison (tamarin, yaourt, menthe).</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Fait Maison</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="entrees">
+                    <img src="images/hero_curry.png" alt="Chicken Rolla" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#8 Chicken Rolla</h3>
+                            <div class="menu-item-price">6,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Rouleaux panés croustillants farcis de poulet assaisonné, servis avec salade fraîche.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Gourmand</span></div>
+                    </div>
+                </div>
+
+                <!-- 2. SPÉCIALITÉS MAISON -->
+                <div class="menu-card animate-on-scroll" data-category="specialites">
+                    <img src="images/butter_chicken.png" alt="Buratta Butter Chicken" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#13 Buratta Butter Chicken</h3>
+                            <div class="menu-item-price">19,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Poulet mijoté dans une sauce onctueuse aux tomates, noix de cajou, amandes et épices douces, servi avec une burrata fondante entière.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">⭐ Incontournable</span><span class="tag-badge">Création Signature</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="specialites">
+                    <img src="images/butter_chicken.png" alt="Butter Chicken" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#12 Classic Butter Chicken</h3>
+                            <div class="menu-item-price">16,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Poulet tendre mariné et grillé, mijoté dans une sauce onctueuse tomate, noix de cajou et amandes.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Succès Maison</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="specialites">
+                    <img src="images/traiteur_catering_buffet.png" alt="Confit de Canard Sauce Curry" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#15 Confit de Canard Sauce Curry</h3>
+                            <div class="menu-item-price">19,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Fusion franco-indienne : confit de canard moelleux nappé d'une sauce curry parfumée.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Création Chef</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="specialites">
+                    <img src="images/hero_curry.png" alt="Badami Murgh" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#14 Badami Murgh</h3>
+                            <div class="menu-item-price">18,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Suprême de poulet, sauce onctueuse aux amandes et noix de cajou parfumée aux épices douces et cardamome.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Doux & Parfumé</span></div>
+                    </div>
+                </div>
+
+                <!-- 3. CURRYS, KORMA & TIKKA MASALA WITH CLEAN OPTION SPACING -->
+                <div class="menu-card animate-on-scroll" data-category="curries">
+                    <img src="images/traiteur_catering_buffet.png" alt="Curry Traditionnel" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Curry Traditionnel</h3>
+                            <div class="menu-item-price">Dès 15,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Une sauce parfumée à base de tomates, oignons et herbes fraîches.</p>
+                        
+                        <div class="menu-options-list">
+                            <div class="option-row"><span>Poulet</span><strong>15,50 €</strong></div>
+                            <div class="option-row"><span>Agneau</span><strong>17,50 €</strong></div>
+                            <div class="option-row"><span>Crevette</span><strong>16,90 €</strong></div>
+                        </div>
+                        
+                        <div class="menu-item-tags"><span class="tag-badge">Options au choix</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="curries">
+                    <img src="images/butter_chicken.png" alt="Korma Doux" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Korma au Lait de Coco</h3>
+                            <div class="menu-item-price">Dès 15,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Sauce légèrement sucrée à base d'amandes, noix de cajou et lait de coco.</p>
+                        
+                        <div class="menu-options-list">
+                            <div class="option-row"><span>Poulet</span><strong>15,50 €</strong></div>
+                            <div class="option-row"><span>Agneau</span><strong>17,50 €</strong></div>
+                            <div class="option-row"><span>Crevettes</span><strong>16,90 €</strong></div>
+                            <div class="option-row"><span>Gambas</span><strong>19,90 €</strong></div>
+                        </div>
+
+                        <div class="menu-item-tags"><span class="tag-badge">Doux & Onctueux</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="curries">
+                    <img src="images/traiteur_catering_buffet.png" alt="Tikka Masala" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Tikka Masala au Four</h3>
+                            <div class="menu-item-price">Dès 16,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Mijoté dans une sauce à base de purée de tomates, poivrons et coriandre fraîche.</p>
+                        
+                        <div class="menu-options-list">
+                            <div class="option-row"><span>Poulet</span><strong>16,00 €</strong></div>
+                            <div class="option-row"><span>Agneau</span><strong>17,50 €</strong></div>
+                            <div class="option-row"><span>Crevette</span><strong>17,90 €</strong></div>
+                            <div class="option-row"><span>Gambas</span><strong>19,90 €</strong></div>
+                        </div>
+
+                        <div class="menu-item-tags"><span class="tag-badge">Parfumé & Épicé</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="curries">
+                    <img src="images/hero_curry.png" alt="Fish Coconut Curry" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#11 Fish Coconut Curry</h3>
+                            <div class="menu-item-price">16,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Filet de poisson mijoté dans un lait de coco parfumé aux herbes et épices indiennes.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Poisson Frais</span></div>
+                    </div>
+                </div>
+
+                <!-- 4. CURRYS VÉGÉTARIENS & THALI -->
+                <div class="menu-card animate-on-scroll" data-category="vegetariens">
+                    <img src="images/traiteur_catering_buffet.png" alt="Thali Végétarien" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#26 Grand Thali Végétarien</h3>
+                            <div class="menu-item-price">21,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Plateau traditionnel complet : dal du jour, sauté de légumes de saison, palak aux épinards, riz basmati, raïta et chutneys maison.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">⭐ Plateau Complet</span><span class="tag-badge">Végétarien</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="vegetariens">
+                    <img src="images/hero_curry.png" alt="Palak Burrata" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#25 Palak Burrata</h3>
+                            <div class="menu-item-price">17,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Burrata fondante servie sur un palak onctueux aux épinards frais, relevé de gingembre, d’ail et d’épices.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Burrata & Épinards</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="vegetariens">
+                    <img src="images/hero_curry.png" alt="Paneer Makhani" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#16 Paneer Makhani</h3>
+                            <div class="menu-item-price">13,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Dés de paneer (fromage) fondants mijotés dans une sauce onctueuse à base de tomates, noix de cajou.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Fromage Indien</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="vegetariens">
+                    <img src="images/hero_curry.png" alt="Dhall Makhani" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#18 Dhall Makhani</h3>
+                            <div class="menu-item-price">15,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Lentilles noires mijotées lentement dans une sauce crémeuse aux tomates, au beurre et aux épices.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Crémeux</span></div>
+                    </div>
+                </div>
+
+                <!-- 5. BIRIYANI & GRILLADES -->
+                <div class="menu-card animate-on-scroll" data-category="biriyani">
+                    <img src="images/biryani.png" alt="Biriyani Safran" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Biriyani Royal au Safran</h3>
+                            <div class="menu-item-price">Dès 14,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Riz basmati infusé au safran et mijoté avec des épices indiennes et herbes fraîches.</p>
+                        
+                        <div class="menu-options-list">
+                            <div class="option-row"><span>Végé</span><strong>14,90 €</strong></div>
+                            <div class="option-row"><span>Murgh (Poulet)</span><strong>17,90 €</strong></div>
+                            <div class="option-row"><span>Gosht (Agneau)</span><strong>19,90 €</strong></div>
+                            <div class="option-row"><span>Gambas</span><strong>20,90 €</strong></div>
+                        </div>
+
+                        <div class="menu-item-tags"><span class="tag-badge">Safrané</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="biriyani">
+                    <img src="images/tandoori.png" alt="Assiette de Grillades Tandoori" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Mix Grillades Tandoori</h3>
+                            <div class="menu-item-price">Sur Carte</div>
+                        </div>
+                        <p class="menu-item-desc">Broccoli malai, gambas tandoori, poulet malai, tikka hariyali, seekh kebab d'agneau, fish tikka, riz basmati et légumes plancha.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Four d'Argile</span></div>
+                    </div>
+                </div>
+
+                <!-- 6. NAANS & ACCOMPAGNEMENTS -->
+                <div class="menu-card animate-on-scroll" data-category="naans">
+                    <img src="images/fresh_naan.jpg" alt="Naans au Four Tandoor" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">Naans Cuits au Tandoor</h3>
+                            <div class="menu-item-price">Dès 3,00 €</div>
+                        </div>
+                        <p class="menu-item-desc">Pains levés traditionnels cuits minute au four tandoor d'argile.</p>
+                        
+                        <div class="menu-options-list">
+                            <div class="option-row"><span>Naan Nature</span><strong>3,00 €</strong></div>
+                            <div class="option-row"><span>Naan au Beurre</span><strong>3,50 €</strong></div>
+                            <div class="option-row"><span>Naan au Fromage</span><strong>3,90 €</strong></div>
+                            <div class="option-row"><span>Naan à l'Ail</span><strong>3,90 €</strong></div>
+                            <div class="option-row"><span>Naan au Piment</span><strong>3,90 €</strong></div>
+                        </div>
+
+                        <div class="menu-item-tags"><span class="tag-badge">Cuit Minute</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="naans">
+                    <img src="images/fresh_naan.jpg" alt="Accompagnements Riz & Pains" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#30 Bharwan Kulcha & Riz</h3>
+                            <div class="menu-item-price">Dès 2,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Bharwan Kulcha farci aux pommes de terre/oignon (4,90€), Parotha (4,00€), Riz Vapeur (2,90€), Riz Jeera (3,30€), Pulao Légumes (4,00€).</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Accompagnement</span></div>
+                    </div>
+                </div>
+
+                <!-- 7. DESSERTS & MENU ENFANT -->
+                <div class="menu-card animate-on-scroll" data-category="desserts">
+                    <img src="images/dessert_plated.jpg" alt="Kesar Kulfi" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#34 Kesar Kulfi</h3>
+                            <div class="menu-item-price">6,90 €</div>
+                        </div>
+                        <p class="menu-item-desc">Glace indienne traditionnelle au lait, infusée au safran, pistaches et amandes concassées.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Fait Maison</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="desserts">
+                    <img src="images/dessert_plated.jpg" alt="Gulab Jamun & Café Gourmand" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#36 Gulab Jamun / #37 Café Gourmand</h3>
+                            <div class="menu-item-price">5,50 € / 8,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Beignets moelleux au lait siroppés à la rose et cardamome avec glace vanille, ou assortiment Café Gourmand.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Gourmandise</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-card animate-on-scroll" data-category="desserts">
+                    <img src="images/hero_curry.png" alt="Menu Enfant" class="menu-card-img">
+                    <div class="menu-card-body">
+                        <div class="menu-card-header">
+                            <h3 class="menu-item-title">#27 Menu Enfant</h3>
+                            <div class="menu-item-price">11,50 €</div>
+                        </div>
+                        <p class="menu-item-desc">Menu spécialement adapté aux enfants : Butter chicken doux + Riz Basmati + Boule de Glace au choix.</p>
+                        <div class="menu-item-tags"><span class="tag-badge">Pour Enfants</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. Spécialités indiennes et sri-lankaises depuis 2014.</p>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="reservation.html">Reservation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>📍 51 Rue du Taur, 31000 Toulouse</li>
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="shared.js"></script>
+</body>
+</html>

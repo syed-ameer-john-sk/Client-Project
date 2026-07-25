@@ -1,254 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Consultant sur Mesure</title>
-    <meta name="description"
-        content="Contact Consultant sur Mesure for clinical research consulting services. Get in touch with our team.">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-        rel="stylesheet">
+    <title>Contact Us & Interactive Map | Maison du Curry Toulouse</title>
+    <meta name="description" content="Contact Maison du Curry in Toulouse (51 Rue du Taur & Marché Victor Hugo): phone 0660025968, email Kelan.anne31@gmail.com, WhatsApp, embedded Google Map, and opening hours.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
+<body>
 
-<body class="inner-page-body">
-    <!-- PREMIUM BACKGROUND -->
-    <div class="premium-bg-container">
-        <div class="premium-bg-grid"></div>
-        <div class="premium-bg-grain"></div>
-        <div class="bg-blob bg-blob-1"></div>
-        <div class="bg-blob bg-blob-2"></div>
-        <div class="bg-blob bg-blob-3"></div>
-        <div class="bg-blob bg-blob-4"></div>
-    </div>
-    <!-- HEADER -->
+    <!-- STICKY HEADER -->
     <header class="header">
-        <a href="index.html" class="logo-container">
-            <div class="atom-wrapper">
-                <div class="atom-ring ring-1"></div>
-                <div class="atom-ring ring-2"></div>
-                <div class="atom-ring ring-3"></div>
-                <div class="atom-nucleus"></div>
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="locations.html" class="nav-link">Our Locations</a></li>
+                    <li><a href="reservation.html" class="nav-link">Reservation</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="reservation.html" class="btn btn-primary btn-sm">Book Table</a>
+                <button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button>
             </div>
-            <div class="logo-text-col">
-                <span class="brand-main">Consultant sur Mesure</span>
-                <span class="brand-sub" data-i18n="brand_sub">Expert Consulting Partner</span>
-            </div>
-        </a>
-        <nav class="nav">
-            <a href="index.html" data-i18n="nav_home">Home</a>
-            <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-            <a href="careers.html" data-i18n="nav_careers">Careers</a>
-            <a href="commitments.html" data-i18n="nav_commitments">Commitments</a>
-            <a href="about.html" data-i18n="nav_about">About</a>
-            <a href="contact.html" class="active" data-i18n="nav_contact">Contact</a>
-        </nav>
-        <div class="header-right">
-            <button class="lang-btn" id="langBtn">EN</button>
-            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         </div>
     </header>
 
-    <!-- MOBILE NAV -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html" data-i18n="nav_home">Home</a>
-        <a href="companies.html" data-i18n="nav_companies">For Companies</a>
-        <a href="careers.html" data-i18n="nav_careers">Careers</a>
-        <a href="commitments.html" data-i18n="nav_commitments">Commitments</a>
-        <a href="about.html" data-i18n="nav_about">About</a>
-        <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    <!-- MOBILE NAVIGATION -->
+    <nav class="mobile-nav" id="mobileNavDrawer">
+        <a href="index.html" class="mobile-link">Home</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="menu.html" class="mobile-link">Menu</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="locations.html" class="mobile-link">Our Locations</a>
+        <a href="reservation.html" class="mobile-link">Reservation</a>
+        <a href="contact.html" class="mobile-link active">Contact</a>
     </nav>
 
-    <!-- PAGE HERO -->
-    <section class="page-hero">
-        <div class="page-hero-content">
-            <div class="page-label" data-i18n="contact_label">Contact Us</div>
-            <h1 class="page-title">
-                <span data-i18n="contact_title">Let’s discuss your next clinical project.</span>
-            </h1>
-            <p class="page-subtitle" data-i18n="contact_subtitle">Tell us about your needs and we'll get back to you
-                within 24 hours.</p>
+    <!-- HERO HEADER -->
+    <section style="padding:8rem 0 3rem; background:linear-gradient(180deg, rgba(13,13,13,0.9) 0%, rgba(13,13,13,1) 100%), url('images/hero_curry.png') center/cover;" class="text-center">
+        <div class="container">
+            <span class="section-tag">Get In Touch</span>
+            <h1 class="section-title">Contact Maison du Curry</h1>
+            <p class="section-subtitle mx-auto">51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. We are ready to welcome you!</p>
         </div>
     </section>
 
-    <!-- CONTACT SECTION -->
-    <section class="section section-light">
+    <!-- CONTACT DETAILS & FORM SECTION (MDC-009) -->
+    <section class="about-section">
         <div class="container">
-            <div class="contact-grid">
-                <!-- FORM CARD -->
-                <div class="contact-form-card animate-in">
-                    <div id="notification" class="notification"></div>
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form_name">Your Name</label>
-                                <input type="text" class="form-input" id="userName" name="user_name" required>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form_email">Email Address</label>
-                                <input type="email" class="form-input" id="userEmail" name="user_email" required>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form_company">Company (Optional)</label>
-                                <input type="text" class="form-input" id="userCompany" name="user_company">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label" data-i18n="form_subject">Subject</label>
-                                <input type="text" class="form-input" id="subject" name="subject" required>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; margin-bottom:4rem;">
+                <div class="animate-on-scroll">
+                    <span class="section-tag">Direct Lines & Address</span>
+                    <h2 class="section-title">Reach Our Team</h2>
+                    <p style="color:var(--text-muted); margin-bottom:2rem;">Visit our main restaurant at 51 Rue du Taur or our market stand at Marché Victor Hugo in Toulouse.</p>
+
+                    <div style="display:flex; flex-direction:column; gap:1.2rem; margin-bottom:2rem;">
+                        <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-card); padding:1rem; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.06);">
+                            <span style="font-size:1.5rem;">📍</span>
+                            <div>
+                                <div style="font-size:0.85rem; color:var(--text-muted);">Main Restaurant Address</div>
+                                <div style="font-weight:600; color:var(--text-main);">51 Rue du Taur, 31000 Toulouse, France</div>
                             </div>
                         </div>
+
+                        <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-card); padding:1rem; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.06);">
+                            <span style="font-size:1.5rem;">📞</span>
+                            <div>
+                                <div style="font-size:0.85rem; color:var(--text-muted);">Direct Phone</div>
+                                <a href="tel:0660025968" style="font-weight:600; color:var(--color-primary);">06 60 02 59 68</a>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-card); padding:1rem; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.06);">
+                            <span style="font-size:1.5rem;">✉️</span>
+                            <div>
+                                <div style="font-size:0.85rem; color:var(--text-muted);">Email Address</div>
+                                <a href="mailto:Kelan.anne31@gmail.com" style="font-weight:600; color:var(--color-primary);">Kelan.anne31@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; align-items:center; gap:1rem; background:var(--bg-card); padding:1rem; border-radius:var(--radius-sm); border:1px solid rgba(255,255,255,0.06);">
+                            <span style="font-size:1.5rem;">💬</span>
+                            <div>
+                                <div style="font-size:0.85rem; color:var(--text-muted);">WhatsApp Business</div>
+                                <a href="https://wa.me/33660025968" target="_blank" rel="noopener noreferrer" style="font-weight:600; color:#25D366;">Chat on WhatsApp ↗</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SOCIAL LINKS (MDC-010) -->
+                    <h4 style="font-size:1rem; margin-bottom:0.8rem;">Follow Us on Social Media</h4>
+                    <div style="display:flex; gap:1rem;">
+                        <a href="https://www.instagram.com/maisonducurry31" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">📸 Instagram (@maisonducurry31) ↗</a>
+                        <a href="https://www.tiktok.com/@maisonducurry" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">🎵 TikTok (@maisonducurry) ↗</a>
+                    </div>
+                </div>
+
+                <!-- CONTACT FORM -->
+                <div class="animate-on-scroll">
+                    <form class="js-contact-form" style="background:var(--bg-card); padding:2.5rem; border-radius:var(--radius-md); border:1px solid rgba(255,255,255,0.08);">
+                        <h3 style="font-size:1.5rem; margin-bottom:1.2rem;">Send Us a Message</h3>
+
                         <div class="form-group">
-                            <label class="form-label" data-i18n="form_message">Your Message</label>
-                            <textarea class="form-textarea" id="message" name="message" required></textarea>
+                            <label class="form-label" for="cName">Your Name *</label>
+                            <input type="text" id="cName" class="form-control" placeholder="Full name" required>
                         </div>
-                        <div class="form-group" style="margin-bottom: 24px;">
-                            <label class="gdpr-checkbox">
-                                <input type="checkbox" id="gdprConsent" required>
-                                <span data-i18n="gdpr_consent">I agree to the processing of my personal data in
-                                    accordance with the Privacy Policy.</span>
-                            </label>
+
+                        <div class="form-group">
+                            <label class="form-label" for="cEmail">Your Email *</label>
+                            <input type="email" id="cEmail" class="form-control" placeholder="name@domain.com" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-submit" style="width: 100%;" id="submitBtn"
-                            data-i18n="form_submit">Send Message</button>
+
+                        <div class="form-group">
+                            <label class="form-label" for="cSubject">Subject</label>
+                            <input type="text" id="cSubject" class="form-control" placeholder="e.g. Private Event Inquiry">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="cMessage">Your Message *</label>
+                            <textarea id="cMessage" class="form-control" rows="4" placeholder="How can we assist you?" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Submit Message →</button>
                     </form>
-                </div>
-
-                <!-- INFO CARD -->
-                <div class="contact-info-card animate-in">
-                    <div class="section-label" data-i18n="contact_info_label" style="color: var(--primary-light);">
-                        Contact Information</div>
-                    <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 32px; color: var(--white);"
-                        data-i18n="contact_info_title">Get in Touch</h3>
-
-                    <div class="info-item">
-                        <div class="info-icon"
-                            style="background: rgba(15, 118, 110, 0.1); color: var(--primary-light);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <rect width="20" height="16" x="2" y="4" rx="2" />
-                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div class="info-title">Email</div>
-                        <div class="info-text">
-                            <a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"
-                            style="background: rgba(15, 118, 110, 0.1); color: var(--primary-light);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                <circle cx="12" cy="10" r="3" opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div class="info-title">Registered Office</div>
-                        <div class="info-text">5 rue du Mouton<br>Jouy-Moutier, France</div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"
-                            style="background: rgba(15, 118, 110, 0.1); color: var(--primary-light);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                <circle cx="12" cy="10" r="3" opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div class="info-title">Visits / Appointments</div>
-                        <div class="info-text">
-                            <a href="https://maps.app.goo.gl/2EEY5JdCQMbq45B3A" target="_blank" rel="noopener"
-                                style="color: inherit; text-decoration: underline;">CAP
-                                Mermoz, 44 rue Jean Mermoz<br>78600 Maison-Laffitte, France</a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"
-                            style="background: rgba(15, 118, 110, 0.1); color: var(--primary-light);">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="2" y1="12" x2="22" y2="12" opacity="0.1" />
-                                <path
-                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                                    opacity="0.3" />
-                            </svg>
-                        </div>
-                        <div class="info-title">Coverage</div>
-                        <div class="info-text">France & Europe<br>Expanding to United States</div>
-                    </div>
-                </div>
-
-                <!-- CAP Mermoz Building Image -->
-                <div
-                    style="margin-top: 24px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                    <img src="images/cap-mermoz.jpg.png" alt="CAP Mermoz - 44 rue Jean Mermoz, Maisons-Laffitte"
-                        style="width: 100%; height: auto; display: block;">
-                </div>
-
-                <!-- Google Maps Embed -->
-                <div
-                    style="margin-top: 24px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d275.42675412460557!2d2.14256990109745!3d48.947475293128086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e661f8ebeaffeb%3A0x173d1523d4a1648e!2sCap%20Mermoz!5e0!3m2!1sen!2sus!4v1771867025004!5m2!1sen!2sus"
-                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 
-            <!-- WHY CONTACT US -->
-            <div class="highlights-row animate-in">
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                    </div>
-                    <div class="highlight-title" data-i18n="why_response">24h Response</div>
-                    <div class="highlight-text" data-i18n="why_response_text">We reply to every inquiry within one
-                        business day.</div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            <path d="m9 12 2 2 4-4" opacity="0.5" />
-                        </svg>
-                    </div>
-                    <div class="highlight-title" data-i18n="why_gdpr">GDPR Compliant</div>
-                    <div class="highlight-text" data-i18n="why_gdpr_text">Your data is handled securely in full
-                        compliance with European regulations.</div>
-                </div>
-                <div class="highlight-item">
-                    <div class="highlight-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10" />
-                            <line x1="2" y1="12" x2="22" y2="12" opacity="0.3" />
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                        </svg>
-                    </div>
-                    <div class="highlight-title" data-i18n="why_worldwide">Worldwide Coverage</div>
-                    <div class="highlight-text" data-i18n="why_worldwide_text">Based in France, operating across Europe
-                        and expanding globally.</div>
-                </div>
+            <!-- INTERACTIVE GOOGLE MAP EMBED (MDC-009) -->
+            <div class="animate-on-scroll" style="border-radius:var(--radius-md); overflow:hidden; border:1px solid rgba(255,255,255,0.08); box-shadow:var(--shadow-md);">
+                <iframe 
+                    title="Maison du Curry Google Map Location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.8876!2d1.4428!3d43.6063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebb61b!2s51+Rue+du+Taur%2C+31000+Toulouse!5e0!3m2!1sen!2sfr!4v1700000000000!5m2!1sen!2sfr" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
         </div>
     </section>
@@ -257,150 +155,38 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <div class="footer-brand-name">Consultant sur Mesure</div>
-                    <p class="footer-brand-text" data-i18n="footer_text">Expert Consulting Partner for Clinical
-                        Research.</p>
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo"><span>Maison</span> du Curry</a>
+                    <p>51 Rue du Taur, 31000 Toulouse & Marché Victor Hugo. Spécialités indiennes et sri-lankaises depuis 2014.</p>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_nav">Navigation</h4>
+                    <h4 class="footer-col-title">Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
-                        <li><a href="companies.html" data-i18n="nav_companies">For Companies</a></li>
-                        <li><a href="careers.html" data-i18n="nav_careers">Careers</a></li>
-                        <li><a href="about.html" data-i18n="nav_about">About</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="locations.html">Locations</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title" data-i18n="footer_contact">Contact</h4>
+                    <h4 class="footer-col-title">Contact</h4>
                     <ul class="footer-links">
-                        <li><a href="mailto:consultantsurmesure@gmail.com">consultantsurmesure@gmail.com</a></li>
-                        <li><a href="tel:+33744114917">07 44 11 49 17</a></li>
+                        <li>📍 51 Rue du Taur, 31000 Toulouse</li>
+                        <li>📞 <a href="tel:0660025968">06 60 02 59 68</a></li>
+                        <li>✉️ <a href="mailto:Kelan.anne31@gmail.com">Kelan.anne31@gmail.com</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="footer-col-title">Location</h4>
-                    <p class="footer-brand-text">Maison-Laffitte, France</p>
-                    <div
-                        style="margin-top: 12px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                        <img src="images/cap-mermoz.jpg.png" alt="CAP Mermoz - 44 rue Jean Mermoz, Maisons-Laffitte"
-                            style="width: 100%; height: auto; display: block;">
-                    </div>
-                    <div
-                        style="margin-top: 12px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d275.42675412460557!2d2.14256990109745!3d48.947475293128086!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e661f8ebeaffeb%3A0x173d1523d4a1648e!2sCap%20Mermoz!5e0!3m2!1sen!2sus!4v1771867025004!5m2!1sen!2sus"
-                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
+                    <h4 class="footer-col-title">Opening Hours</h4>
+                    <div class="js-opening-hours" style="font-size:0.88rem;"></div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-i18n="footer_all_rights">&copy; 2026 Consultant sur Mesure. All rights reserved.</p>
-                <div class="footer-legal-links">
-                    <a href="mentions-legales.html" data-i18n="legal_title">Mentions légales</a>
-                    <span>|</span>
-                    <a href="privacy-policy.html" data-i18n="footer_privacy">Politique de confidentialité</a>
-                    <span>|</span>
-                    <a href="contact.html" data-i18n="footer_contact">Contact</a>
-                </div>
+                <p>&copy; 2026 Maison du Curry. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="shared.js"></script>
-    <script>
-        // EmailJS Configuration
-        const EMAILJS_PUBLIC_KEY = 'esO_u4Q4zeoE2dvT7';
-        const EMAILJS_SERVICE_ID = 'service_2id3c9l';
-
-        // Initialize EmailJS
-        emailjs.init(EMAILJS_PUBLIC_KEY);
-
-        const contactForm = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const notification = document.getElementById('notification');
-
-        function getCurrentLang() {
-            return localStorage.getItem('site_lang') || 'en';
-        }
-
-        function showNotification(type, message) {
-            notification.className = 'notification ' + type + ' show';
-            notification.textContent = message;
-            setTimeout(() => notification.classList.remove('show'), 8000);
-        }
-
-        contactForm.addEventListener('submit', async function (e) {
-            e.preventDefault();
-
-            const lang = getCurrentLang();
-            const originalText = submitBtn.textContent;
-            submitBtn.disabled = true;
-            submitBtn.textContent = lang === 'fr' ? 'Envoi en cours...' : 'Sending...';
-
-            const templateParams = {
-                user_name: document.getElementById('userName').value,
-                user_email: document.getElementById('userEmail').value,
-                email: document.getElementById('userEmail').value,
-                reply_to: document.getElementById('userEmail').value,
-                to_email: document.getElementById('userEmail').value,
-                from_name: document.getElementById('userName').value,
-                user_company: document.getElementById('userCompany').value || 'Not specified',
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            const userEmail = document.getElementById('userEmail').value.trim();
-            const userName = document.getElementById('userName').value.trim();
-            const subject = document.getElementById('subject').value.trim();
-            const message = document.getElementById('message').value.trim();
-            const gdpr = document.getElementById('gdprConsent').checked;
-
-            if (!userName || !userEmail || !subject || !message || !gdpr) {
-                const msg = lang === 'fr'
-                    ? 'Veuillez remplir tous les champs obligatoires et accepter les conditions.'
-                    : 'Please fill in all required fields and accept the terms.';
-                showNotification('error', msg);
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-                return;
-            }
-
-            try {
-                // 1. Send notification to owner
-                try {
-                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_dg8uz9p', templateParams);
-                } catch (err1) {
-                    console.error('Owner notification failed:', err1);
-                    throw new Error('Owner template error: ' + (err1.text || err1.status));
-                }
-
-                // 2. Send auto-reply to sender
-                try {
-                    await emailjs.send(EMAILJS_SERVICE_ID, 'template_llokeva', templateParams);
-                } catch (err2) {
-                    console.warn('Auto-reply failed (Owner notified anyway):', err2);
-                    // We don't necessarily want to block success if just the auto-reply fails
-                }
-
-                const successMsg = lang === 'fr' ?
-                    'Merci ! Votre message a été envoyé avec succès.' :
-                    'Thank you! Your message has been sent successfully.';
-                showNotification('success', successMsg);
-                contactForm.reset();
-            } catch (error) {
-                console.error('Final Error Details:', error);
-                const errorMsg = lang === 'fr' ?
-                    'Une erreur est survenue (' + (error.status || error.message) + '). Veuillez nous contacter directement.' :
-                    'An error occurred (' + (error.status || error.message) + '). Please contact us directly.';
-                showNotification('error', errorMsg);
-            } finally {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalText;
-            }
-        });
-    </script>
 </body>
-
 </html>
